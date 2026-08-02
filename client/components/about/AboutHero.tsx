@@ -20,7 +20,7 @@ export function AboutHero() {
           </span>
         </div>
 
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[72px] font-light text-white tracking-[-0.03em] leading-[1.05] max-w-[700px] mb-8">
+        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[72px] font-light text-white tracking-[-0.03em] leading-[1.2] max-w-[700px] mb-8">
           A home built on
           <br />
           <span className="text-[#C9992E]">compassion</span> and care.

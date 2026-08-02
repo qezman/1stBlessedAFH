@@ -9,7 +9,7 @@ export function AboutCTA() {
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#DDB04A] mb-5">
               — SCHEDULE A VISIT
             </div>
-            <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light text-white tracking-[-0.025em] leading-[1.12] mb-6">
+            <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light text-white tracking-[-0.025em] leading-[1.25] mb-6">
               Come see 1st Blessed
               <br />
               for yourself.

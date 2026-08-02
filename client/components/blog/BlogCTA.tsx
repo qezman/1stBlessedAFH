@@ -20,7 +20,7 @@ export function BlogCTA({
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#DDB04A] mb-5">
               — {label}
             </div>
-            <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light text-white tracking-[-0.025em] leading-[1.12] mb-6 whitespace-pre-line">
+            <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light text-white tracking-[-0.025em] leading-[1.25] mb-6 whitespace-pre-line">
               {heading}
             </h2>
             <p className="text-sm sm:text-base font-light text-gray-300 leading-[1.7] max-w-[500px]">

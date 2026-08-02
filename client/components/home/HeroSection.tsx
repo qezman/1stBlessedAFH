@@ -16,7 +16,7 @@ export function HeroSection() {
           Everett, Washington · Licensed Adult Family Home
         </div>
 
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[60px] font-light leading-[1.08] tracking-[-0.03em] text-navy-950 mb-6">
+        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[60px] font-light leading-[1.2] tracking-[-0.03em] text-navy-950 mb-6">
           Senior care that
           <br />
           feels like <span className="font-semibold">home.</span>

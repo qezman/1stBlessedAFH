@@ -1,132 +1,162 @@
 import { Link } from "react-router-dom";
-import { Heart, MapPin, Phone, Mail, Printer, ShieldCheck } from "lucide-react";
-
-const QUICK_LINKS = [
-  { label: "Home", path: "/" },
-  { label: "About Caregivers", path: "/about" },
-  { label: "Home Gallery", path: "/gallery" },
-  { label: "Family Care Blog", path: "/blog" },
-  { label: "FAQs & Guidance", path: "/faqs" },
-  { label: "Contact & Directions", path: "/contact" },
-];
-
-const SERVICES = [
-  "Personalized 24/7 Care",
-  "Medication Management",
-  "Home-Cooked Meals",
-  "Dementia & Memory Care",
-  "Health Vital Monitoring",
-  "Respite & Long-Term Care",
-];
-
-const CONTACT_ITEMS = [
-  { icon: MapPin, text: "6007 Rockefeller Ave\nEverett, WA 98203" },
-  { icon: Phone, text: "206-303-0549", href: "tel:2063030549" },
-  {
-    icon: Mail,
-    text: "1stblessedafh@gmail.com",
-    href: "mailto:1stblessedafh@gmail.com",
-  },
-  { icon: Printer, text: "Fax: 425-493-3277" },
-];
+import { Home, MapPin, Phone, Mail, Award } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-navy-950 text-white pt-16 pb-8 border-t border-navy-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+    <footer className="bg-[#0B1628] text-white pt-16 pb-12 border-t border-white/10">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1.2fr] gap-10 lg:gap-12 mb-16">
+          {/* Column 1: Brand & Badge */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-gold-500 flex items-center justify-center text-white">
-                <Heart className="w-5 h-5 fill-current" />
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded bg-[#25508A] flex items-center justify-center text-white flex-shrink-0">
+                <Home className="w-4 h-4" />
               </div>
               <div>
-                <span className="block font-bold text-lg text-white leading-tight">
+                <span className="block font-medium text-base text-white leading-tight">
                   1st Blessed
                 </span>
-                <span className="block text-xs font-medium text-gold-400 tracking-wider uppercase">
+                <span className="block text-xs font-normal text-gray-300">
                   Adult Family Home
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-gray-300 leading-relaxed">
+            <p className="text-sm font-light text-gray-300 leading-relaxed max-w-[280px]">
               A warm, licensed adult family home in Everett, WA providing
               personalized 24-hour care for up to six residents.
             </p>
-            <div className="flex items-center space-x-2 text-xs bg-navy-800 text-gold-400 px-3 py-2 rounded-lg border border-navy-600/40 w-fit">
-              <ShieldCheck className="w-4 h-4 text-gold-500" />
+            <div className="inline-flex items-center gap-2.5 bg-[#1A3358] text-white text-xs font-medium px-4 py-2.5 rounded border border-white/10">
+              <Award className="w-4 h-4 text-[#C9992E]" />
               <span>WA State Licensed AFH</span>
             </div>
           </div>
 
+          {/* Column 2: Pages */}
           <div>
-            <h3 className="text-sm font-semibold text-gold-400 tracking-wider uppercase mb-4">
-              Quick Links
-            </h3>
-            <ul className="space-y-2.5 text-sm">
-              {QUICK_LINKS.map(({ label, path }) => (
-                <li key={path}>
-                  <Link
-                    to={path}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
+            <h3 className="text-base font-normal text-white mb-4">Pages</h3>
+            <ul className="space-y-2.5 text-sm font-light text-gray-300">
+              <li>
+                <Link to="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/gallery"
+                  className="hover:text-white transition-colors"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/faqs" className="hover:text-white transition-colors">
+                  FAQs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacypolicy"
+                  className="hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms-of-use"
+                  className="hover:text-white transition-colors"
+                >
+                  Terms
+                </Link>
+              </li>
             </ul>
           </div>
 
+          {/* Column 3: Services */}
           <div>
-            <h3 className="text-sm font-semibold text-gold-400 tracking-wider uppercase mb-4">
-              Our Services
-            </h3>
-            <ul className="space-y-2.5 text-sm text-gray-300">
-              {SERVICES.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
+            <h3 className="text-base font-normal text-white mb-4">Services</h3>
+            <ul className="space-y-2.5 text-sm font-light text-gray-300">
+              <li>Personal Care</li>
+              <li>Medication Management</li>
+              <li>Meal Service</li>
+              <li>Health Monitoring</li>
+              <li>Activities</li>
             </ul>
           </div>
 
+          {/* Column 4: Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-gold-400 tracking-wider uppercase mb-4">
-              Contact & Location
-            </h3>
-            <ul className="space-y-3 text-sm text-gray-300">
-              {CONTACT_ITEMS.map(({ icon: Icon, text, href }) => (
-                <li key={text} className="flex items-start space-x-3">
-                  <Icon className="w-4 h-4 text-gold-500 flex-shrink-0 mt-0.5" />
-                  {href ? (
-                    <a
-                      href={href}
-                      className="hover:text-gold-400 transition-colors"
-                    >
-                      {text}
-                    </a>
-                  ) : (
-                    <span style={{ whiteSpace: "pre-line" }}>{text}</span>
-                  )}
-                </li>
-              ))}
+            <h3 className="text-base font-normal text-white mb-4">Contact</h3>
+            <ul className="space-y-3.5 text-sm font-light text-gray-300">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <div>6007 Rockefeller Ave</div>
+                  <div>Everett, WA 98203</div>
+                </div>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                <a
+                  href="tel:2063030549"
+                  className="hover:text-white transition-colors"
+                >
+                  Phone: 206-303-0549
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                <a
+                  href="mailto:1stblessedafh@gmail.com"
+                  className="hover:text-white transition-colors break-all"
+                >
+                  1stblessedafh@gmail.com
+                </a>
+              </li>
+              <li className="text-sm font-light text-gray-300 pl-7">
+                Fax Number: 425-493-3277
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-navy-800/80 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 space-y-4 md:space-y-0">
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs font-light text-gray-400 gap-4">
           <p>
             © {new Date().getFullYear()} 1st Blessed Adult Family Home. All
             rights reserved.
           </p>
-          <div className="flex space-x-6">
+          <div className="flex gap-6">
             <Link
               to="/privacypolicy"
-              className="hover:text-gold-400 transition-colors"
+              className="hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms-of-use"
-              className="hover:text-gold-400 transition-colors"
+              className="hover:text-white transition-colors"
             >
               Terms of Use
             </Link>

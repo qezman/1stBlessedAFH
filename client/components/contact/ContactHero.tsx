@@ -21,7 +21,7 @@ export function ContactHero() {
           </span>
         </div>
 
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[68px] font-light text-white tracking-[-0.03em] leading-[1.05] max-w-[600px] mb-6">
+        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[68px] font-light text-white tracking-[-0.03em] leading-[1.2] max-w-[600px] mb-6">
           We'd love to
           <br />
           <span className="text-[#C9992E]">hear from you.</span>
