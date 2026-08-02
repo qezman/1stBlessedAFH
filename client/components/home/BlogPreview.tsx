@@ -1,9 +1,9 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { blogPosts } from '../../data/blog';
-import { SectionHeader } from '../ui/SectionHeader';
-import { BlogCard } from '../blog/BlogCard';
-import { Button } from '../ui/Button';
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import { blogPosts } from "../../data/blog";
+import { SectionHeader } from "../ui/SectionHeader";
+import { BlogCard } from "../blog/BlogCard";
+import { Button } from "../ui/Button";
 
 export const BlogPreview: React.FC = () => {
   const latestPosts = blogPosts.slice(0, 3);

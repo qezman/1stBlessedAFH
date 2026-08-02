@@ -1,7 +1,7 @@
-import React from 'react';
-import { testimonialsData } from '../../data/testimonials';
-import { SectionHeader } from '../ui/SectionHeader';
-import { TestimonialCard } from '../ui/TestimonialCard';
+import React from "react";
+import { testimonialsData } from "../../data/testimonials";
+import { SectionHeader } from "../ui/SectionHeader";
+import { TestimonialCard } from "../ui/TestimonialCard";
 
 export const TestimonialSection: React.FC = () => {
   return (

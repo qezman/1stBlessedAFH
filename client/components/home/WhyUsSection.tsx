@@ -1,0 +1,70 @@
+import { Button } from "../ui/Button";
+
+const DIFFERENTIATORS = [
+  {
+    title: "Small by design",
+    text: "Six residents maximum — always. This isn't about capacity, it's about what genuine care actually requires.",
+  },
+  {
+    title: "Real home, real neighborhood",
+    text: "A residential house in a real Everett neighborhood. Not a facility, not a wing — a home address.",
+  },
+  {
+    title: "Consistent caregivers",
+    text: "Your loved one is seen by the same faces every day. Continuity of care reduces anxiety and builds trust.",
+  },
+  {
+    title: "Family-first communication",
+    text: "Regular updates, open-door visits, and direct caregiver access. You are never kept in the dark.",
+  },
+  {
+    title: "State-licensed & inspected",
+    text: "Fully licensed by Washington State DSHS. We meet and exceed all AFH care standards.",
+  },
+];
+
+export function WhyUsSection() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div>
+          <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-5">
+            <span className="w-5 h-[1px] bg-navy-500" />
+            Why 1st Blessed
+          </div>
+          <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-tight mb-6">
+            What makes us different from every other option.
+          </h2>
+          <p className="text-base font-light text-gray-600 leading-[1.8] mb-8">
+            Most senior care options offer scale. We offer the opposite — and
+            that's exactly the point.
+          </p>
+          <Button to="/contact" variant="gold" size="lg">
+            Talk to us today →
+          </Button>
+        </div>
+
+        <div className="flex flex-col border-l border-gray-200">
+          {DIFFERENTIATORS.map((d, i) => (
+            <div
+              key={i}
+              className="py-7 pl-9 border-b border-gray-100 grid grid-cols-[auto_1fr] gap-5 items-start last:border-b-0"
+            >
+              <span className="font-sans text-xs font-semibold text-navy-300 tracking-[0.08em] pt-0.5">
+                0{i + 1}
+              </span>
+              <div>
+                <h3 className="text-base font-medium text-navy-950 mb-2">
+                  {d.title}
+                </h3>
+                <p className="text-sm font-light text-gray-600 leading-relaxed">
+                  {d.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

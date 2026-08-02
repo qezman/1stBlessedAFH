@@ -12,11 +12,14 @@ export const GalleryCTA: React.FC = () => {
           </div>
 
           <h2 className="font-sans text-3xl sm:text-4xl font-light text-white tracking-tight leading-snug">
-            Photos don't do it justice.<br />Come visit.
+            Photos don't do it justice.
+            <br />
+            Come visit.
           </h2>
 
           <p className="text-sm sm:text-base font-light text-[#A8C3E0] leading-relaxed max-w-xl">
-            Schedule a tour and walk through every room yourself. No pressure, open-door, 7 days a week.
+            Schedule a tour and walk through every room yourself. No pressure,
+            open-door, 7 days a week.
           </p>
         </div>
 

@@ -1,9 +1,18 @@
-import { useParams, Link } from 'react-router-dom';
-import { blogPosts } from '../data/blog';
-import { Badge } from '../components/ui/Badge';
-import { Button } from '../components/ui/Button';
-import { ArrowLeft, Clock, User, Calendar, Facebook, Mail, Link as LinkIcon, Heart } from 'lucide-react';
-import { BlogCard } from '../components/blog/BlogCard';
+import { useParams, Link } from "react-router-dom";
+import { blogPosts } from "../data/blog";
+import { Badge } from "../components/ui/Badge";
+import { Button } from "../components/ui/Button";
+import {
+  ArrowLeft,
+  Clock,
+  User,
+  Calendar,
+  Facebook,
+  Mail,
+  Link as LinkIcon,
+  Heart,
+} from "lucide-react";
+import { BlogCard } from "../components/blog/BlogCard";
 
 export function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -12,9 +21,15 @@ export function BlogPost() {
   if (!post) {
     return (
       <main className="pt-32 pb-20 text-center max-w-xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-navy-950 mb-4">Article Not Found</h1>
-        <p className="text-gray-600 mb-8">The requested blog post could not be found.</p>
-        <Button to="/blog" variant="primary" size="md">Back to Blog</Button>
+        <h1 className="text-3xl font-bold text-navy-950 mb-4">
+          Article Not Found
+        </h1>
+        <p className="text-gray-600 mb-8">
+          The requested blog post could not be found.
+        </p>
+        <Button to="/blog" variant="primary" size="md">
+          Back to Blog
+        </Button>
       </main>
     );
   }
@@ -24,15 +39,15 @@ export function BlogPost() {
   const copyLink = () => navigator.clipboard.writeText(window.location.href);
 
   const shareButtons = [
-    { icon: LinkIcon, label: 'Copy Link', onClick: copyLink },
+    { icon: LinkIcon, label: "Copy Link", onClick: copyLink },
     {
       icon: Facebook,
-      label: 'Share on Facebook',
+      label: "Share on Facebook",
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`,
     },
     {
       icon: Mail,
-      label: 'Email Article',
+      label: "Email Article",
       href: `mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(window.location.href)}`,
     },
   ];
@@ -49,7 +64,11 @@ export function BlogPost() {
           </Link>
 
           <div className="flex items-center space-x-3 mb-4">
-            <Badge variant={post.category === 'FAMILY GUIDES' ? 'gold' : 'blue'}>{post.category}</Badge>
+            <Badge
+              variant={post.category === "FAMILY GUIDES" ? "gold" : "blue"}
+            >
+              {post.category}
+            </Badge>
             <div className="flex items-center space-x-1 text-xs text-gray-300">
               <Clock className="w-3.5 h-3.5" />
               <span>{post.readTime}</span>
@@ -79,7 +98,9 @@ export function BlogPost() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="hidden lg:block lg:col-span-2">
               <div className="sticky top-28 space-y-4">
-                <span className="block text-[10px] font-bold text-gray-400 tracking-wider uppercase">SHARE</span>
+                <span className="block text-[10px] font-bold text-gray-400 tracking-wider uppercase">
+                  SHARE
+                </span>
                 {shareButtons.map(({ icon: Icon, label, onClick, href }) =>
                   href ? (
                     <a
@@ -101,7 +122,7 @@ export function BlogPost() {
                     >
                       <Icon className="w-4 h-4" />
                     </button>
-                  )
+                  ),
                 )}
               </div>
             </div>
@@ -116,8 +137,13 @@ export function BlogPost() {
                   <Heart className="w-6 h-6 fill-current" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy-950 text-sm">Written by {post.author}</h4>
-                  <p className="text-xs text-gray-600">{post.authorRole} at 1st Blessed Adult Family Home in Everett, WA.</p>
+                  <h4 className="font-bold text-navy-950 text-sm">
+                    Written by {post.author}
+                  </h4>
+                  <p className="text-xs text-gray-600">
+                    {post.authorRole} at 1st Blessed Adult Family Home in
+                    Everett, WA.
+                  </p>
                 </div>
               </div>
             </div>
@@ -127,9 +153,13 @@ export function BlogPost() {
 
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-navy-950 mb-8">Keep Reading</h2>
+          <h2 className="text-2xl font-bold text-navy-950 mb-8">
+            Keep Reading
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {related.map((rel) => <BlogCard key={rel.slug} post={rel} />)}
+            {related.map((rel) => (
+              <BlogCard key={rel.slug} post={rel} />
+            ))}
           </div>
         </div>
       </section>

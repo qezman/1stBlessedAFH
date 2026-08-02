@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Clock, User, ArrowRight } from 'lucide-react';
-import { BlogPost } from '../../data/blog';
-import { Badge } from '../ui/Badge';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Clock, User, ArrowRight } from "lucide-react";
+import { BlogPost } from "../../data/blog";
+import { Badge } from "../ui/Badge";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -13,7 +13,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
     <article className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-300 group">
       <div className="p-6">
         <div className="flex items-center justify-between gap-2 mb-4">
-          <Badge variant={post.category === 'FAMILY GUIDES' ? 'gold' : 'blue'}>
+          <Badge variant={post.category === "FAMILY GUIDES" ? "gold" : "blue"}>
             {post.category}
           </Badge>
           <div className="flex items-center space-x-1 text-xs text-gray-500 font-medium">
@@ -22,7 +22,10 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           </div>
         </div>
 
-        <Link to={`/blog/${post.slug}`} className="block group-hover:text-gold-600 transition-colors">
+        <Link
+          to={`/blog/${post.slug}`}
+          className="block group-hover:text-gold-600 transition-colors"
+        >
           <h3 className="text-xl font-bold text-navy-950 mb-3 leading-snug line-clamp-2">
             {post.title}
           </h3>

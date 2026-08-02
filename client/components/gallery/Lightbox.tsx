@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { GalleryPhoto } from '../../data/galleryPhotos';
+import { useEffect } from "react";
+import { GalleryPhoto } from "../../data/galleryPhotos";
 
 interface LightboxProps {
   photos: GalleryPhoto[];
@@ -9,11 +9,16 @@ interface LightboxProps {
   onNext: () => void;
 }
 
-const NavBtn = ({ label, onClick, children, position }: {
+const NavBtn = ({
+  label,
+  onClick,
+  children,
+  position,
+}: {
   label: string;
   onClick: (e: React.MouseEvent) => void;
   children: React.ReactNode;
-  position: 'left' | 'right';
+  position: "left" | "right";
 }) => (
   <button
     className={`fixed top-1/2 -translate-y-1/2 ${position}-6 bg-white/10 hover:bg-white/20 border border-white/15 w-12 h-12 flex items-center justify-center text-white transition-colors z-[1001]`}
@@ -24,20 +29,26 @@ const NavBtn = ({ label, onClick, children, position }: {
   </button>
 );
 
-export function Lightbox({ photos, index, onClose, onPrev, onNext }: LightboxProps) {
+export function Lightbox({
+  photos,
+  index,
+  onClose,
+  onPrev,
+  onNext,
+}: LightboxProps) {
   const photo = photos[index];
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowLeft') onPrev();
-      if (e.key === 'ArrowRight') onNext();
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev();
+      if (e.key === "ArrowRight") onNext();
     };
-    window.addEventListener('keydown', onKey);
-    document.body.style.overflow = 'hidden';
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
     return () => {
-      window.removeEventListener('keydown', onKey);
-      document.body.style.overflow = 'auto';
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "auto";
     };
   }, [onClose, onPrev, onNext]);
 
@@ -54,17 +65,38 @@ export function Lightbox({ photos, index, onClose, onPrev, onNext }: LightboxPro
         aria-label="Close lightbox"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M2 2L14 14M14 2L2 14" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+          <path
+            d="M2 2L14 14M14 2L2 14"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
         </svg>
       </button>
 
-      <NavBtn label="Previous photo" position="left" onClick={(e) => { e.stopPropagation(); onPrev(); }}>
+      <NavBtn
+        label="Previous photo"
+        position="left"
+        onClick={(e) => {
+          e.stopPropagation();
+          onPrev();
+        }}
+      >
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M11 4L6 9L11 14" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M11 4L6 9L11 14"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </NavBtn>
 
-      <div className="relative flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="relative flex items-center justify-center"
+        onClick={(e) => e.stopPropagation()}
+      >
         <img
           src={photo.src}
           alt={photo.caption}
@@ -72,9 +104,22 @@ export function Lightbox({ photos, index, onClose, onPrev, onNext }: LightboxPro
         />
       </div>
 
-      <NavBtn label="Next photo" position="right" onClick={(e) => { e.stopPropagation(); onNext(); }}>
+      <NavBtn
+        label="Next photo"
+        position="right"
+        onClick={(e) => {
+          e.stopPropagation();
+          onNext();
+        }}
+      >
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M7 4L12 9L7 14" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M7 4L12 9L7 14"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </NavBtn>
 

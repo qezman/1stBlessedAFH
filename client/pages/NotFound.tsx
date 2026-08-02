@@ -1,6 +1,6 @@
-import React from 'react';
-import { Button } from '../components/ui/Button';
-import { Home } from 'lucide-react';
+import React from "react";
+import { Button } from "../components/ui/Button";
+import { Home } from "lucide-react";
 
 export const NotFound: React.FC = () => {
   return (

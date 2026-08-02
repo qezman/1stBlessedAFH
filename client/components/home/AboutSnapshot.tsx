@@ -1,14 +1,14 @@
-import { CheckCircle2, ArrowRight } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { SectionHeader } from '../ui/SectionHeader';
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Button } from "../ui/Button";
+import { SectionHeader } from "../ui/SectionHeader";
 
 const HIGHLIGHTS = [
-  'Fully licensed & regulated by Washington State DSHS',
-  'Caregivers certified in CPR, First Aid, and Dementia Care',
-  'Intimate 6-bed capacity ensures high staff-to-resident ratio',
-  'Customized care plans reviewed and updated regularly',
-  'Open-door family visiting policy in a cozy neighborhood setting',
-  'Safe, accessible single-story layout with no stairs',
+  "Fully licensed & regulated by Washington State DSHS",
+  "Caregivers certified in CPR, First Aid, and Dementia Care",
+  "Intimate 6-bed capacity ensures high staff-to-resident ratio",
+  "Customized care plans reviewed and updated regularly",
+  "Open-door family visiting policy in a cozy neighborhood setting",
+  "Safe, accessible single-story layout with no stairs",
 ];
 
 export function AboutSnapshot() {
@@ -26,9 +26,12 @@ export function AboutSnapshot() {
               <div className="absolute inset-0 bg-navy-950/10" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-navy-800 text-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block border border-navy-600">
-              <span className="block text-3xl font-bold text-gold-500 mb-1">Dignity & Respect</span>
+              <span className="block text-3xl font-bold text-gold-500 mb-1">
+                Dignity & Respect
+              </span>
               <p className="text-xs text-gray-300 leading-normal">
-                Every resident is cherished as a family member with personalized attention every hour of the day.
+                Every resident is cherished as a family member with personalized
+                attention every hour of the day.
               </p>
             </div>
           </div>
@@ -41,11 +44,16 @@ export function AboutSnapshot() {
               align="left"
             />
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              We believe that as our parents and grandparents age, they deserve to live in a clean, tranquil, single-family neighborhood home where they are known by name, voice, and personal preference.
+              We believe that as our parents and grandparents age, they deserve
+              to live in a clean, tranquil, single-family neighborhood home
+              where they are known by name, voice, and personal preference.
             </p>
             <ul className="space-y-3 pt-2">
               {HIGHLIGHTS.map((item) => (
-                <li key={item} className="flex items-start space-x-3 text-sm text-navy-950 font-medium">
+                <li
+                  key={item}
+                  className="flex items-start space-x-3 text-sm text-navy-950 font-medium"
+                >
                   <CheckCircle2 className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
                   <span>{item}</span>
                 </li>
@@ -53,7 +61,8 @@ export function AboutSnapshot() {
             </ul>
             <div className="pt-4">
               <Button to="/about" variant="primary" size="md">
-                Meet Our Caregivers & Values <ArrowRight className="w-4 h-4 ml-2" />
+                Meet Our Caregivers & Values{" "}
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
           </div>

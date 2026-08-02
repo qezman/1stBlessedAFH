@@ -1,6 +1,6 @@
-import React from 'react';
-import { faqCategories } from '../../data/faqs';
-import { ChevronRight } from 'lucide-react';
+import React from "react";
+import { faqCategories } from "../../data/faqs";
+import { ChevronRight } from "lucide-react";
 
 interface FAQSidebarProps {
   selectedCategory: string;
@@ -25,14 +25,14 @@ export const FAQSidebar: React.FC<FAQSidebarProps> = ({
               onClick={() => onSelectCategory(cat.id)}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
                 isSelected
-                  ? 'bg-navy-800 text-white font-semibold shadow-sm'
-                  : 'text-navy-950/80 hover:bg-gold-50 hover:text-gold-600'
+                  ? "bg-navy-800 text-white font-semibold shadow-sm"
+                  : "text-navy-950/80 hover:bg-gold-50 hover:text-gold-600"
               }`}
             >
               <span>{cat.label}</span>
               <ChevronRight
                 className={`w-4 h-4 transition-transform ${
-                  isSelected ? 'rotate-90 text-gold-400' : 'text-gray-400'
+                  isSelected ? "rotate-90 text-gold-400" : "text-gray-400"
                 }`}
               />
             </button>

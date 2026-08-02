@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { faqsData } from '../data/faqs';
-import { FAQSidebar } from '../components/faq/FAQSidebar';
-import { FAQAccordion } from '../components/faq/FAQAccordion';
-import { Button } from '../components/ui/Button';
+import React, { useState } from "react";
+import { faqsData } from "../data/faqs";
+import { FAQSidebar } from "../components/faq/FAQSidebar";
+import { FAQAccordion } from "../components/faq/FAQAccordion";
+import { Button } from "../components/ui/Button";
 
 export const FAQs: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const filteredFaqs =
-    selectedCategory === 'all'
+    selectedCategory === "all"
       ? faqsData
       : faqsData.filter((f) => f.category === selectedCategory);
 
@@ -24,7 +24,8 @@ export const FAQs: React.FC = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Everything you need to know about Adult Family Home care, daily life, medication tracking, and our Everett home.
+            Everything you need to know about Adult Family Home care, daily
+            life, medication tracking, and our Everett home.
           </p>
         </div>
       </section>
@@ -33,7 +34,6 @@ export const FAQs: React.FC = () => {
       <section className="py-20 bg-brand-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
             {/* Sidebar */}
             <div className="lg:col-span-4">
               <FAQSidebar
@@ -49,14 +49,16 @@ export const FAQs: React.FC = () => {
               </div>
               <FAQAccordion items={filteredFaqs} />
             </div>
-
           </div>
 
           {/* Bottom callout */}
           <div className="mt-16 text-center bg-white p-10 rounded-2xl border border-gray-100 shadow-sm max-w-3xl mx-auto space-y-4">
-            <h3 className="text-2xl font-bold text-navy-950">Have a Question Not Answered Here?</h3>
+            <h3 className="text-2xl font-bold text-navy-950">
+              Have a Question Not Answered Here?
+            </h3>
             <p className="text-gray-600 text-sm">
-              We are happy to answer any questions directly by phone or email. No intake pressure, just open information.
+              We are happy to answer any questions directly by phone or email.
+              No intake pressure, just open information.
             </p>
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button to="/contact" variant="gold" size="md">
@@ -70,7 +72,6 @@ export const FAQs: React.FC = () => {
               </a>
             </div>
           </div>
-
         </div>
       </section>
     </main>

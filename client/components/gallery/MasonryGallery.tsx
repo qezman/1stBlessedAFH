@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
-import { GALLERY_PHOTOS } from '../../data/galleryPhotos';
-import { Lightbox } from './Lightbox';
+import { useState, useCallback } from "react";
+import { GALLERY_PHOTOS } from "../../data/galleryPhotos";
+import { Lightbox } from "./Lightbox";
 
 const len = GALLERY_PHOTOS.length;
 
@@ -9,8 +9,14 @@ export function MasonryGallery() {
 
   const open = useCallback((i: number) => setIndex(i), []);
   const close = useCallback(() => setIndex(null), []);
-  const prev = useCallback(() => setIndex((i) => (i !== null ? (i - 1 + len) % len : 0)), []);
-  const next = useCallback(() => setIndex((i) => (i !== null ? (i + 1) % len : 0)), []);
+  const prev = useCallback(
+    () => setIndex((i) => (i !== null ? (i - 1 + len) % len : 0)),
+    [],
+  );
+  const next = useCallback(
+    () => setIndex((i) => (i !== null ? (i + 1) % len : 0)),
+    [],
+  );
 
   return (
     <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
@@ -21,10 +27,38 @@ export function MasonryGallery() {
           </span>
           <div className="flex items-center space-x-2 text-xs font-light text-[#ADB5BD]">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <rect x="1" y="1" width="5" height="5" stroke="#ADB5BD" strokeWidth="1" />
-              <rect x="8" y="1" width="5" height="5" stroke="#ADB5BD" strokeWidth="1" />
-              <rect x="1" y="8" width="5" height="5" stroke="#ADB5BD" strokeWidth="1" />
-              <rect x="8" y="8" width="5" height="5" stroke="#ADB5BD" strokeWidth="1" />
+              <rect
+                x="1"
+                y="1"
+                width="5"
+                height="5"
+                stroke="#ADB5BD"
+                strokeWidth="1"
+              />
+              <rect
+                x="8"
+                y="1"
+                width="5"
+                height="5"
+                stroke="#ADB5BD"
+                strokeWidth="1"
+              />
+              <rect
+                x="1"
+                y="8"
+                width="5"
+                height="5"
+                stroke="#ADB5BD"
+                strokeWidth="1"
+              />
+              <rect
+                x="8"
+                y="8"
+                width="5"
+                height="5"
+                stroke="#ADB5BD"
+                strokeWidth="1"
+              />
             </svg>
             <span>Click any photo to expand</span>
           </div>
@@ -38,7 +72,7 @@ export function MasonryGallery() {
               role="button"
               tabIndex={0}
               aria-label={`View photo: ${photo.caption}`}
-              onKeyDown={(e) => e.key === 'Enter' && open(i)}
+              onKeyDown={(e) => e.key === "Enter" && open(i)}
               className="break-inside-avoid relative overflow-hidden cursor-pointer group block"
             >
               <img
@@ -49,9 +83,24 @@ export function MasonryGallery() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-[#0B1628]/45 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-250">
-                <svg className="w-8 h-8 text-white" viewBox="0 0 32 32" fill="none">
-                  <circle cx="16" cy="16" r="15" stroke="white" strokeWidth="1.2" />
-                  <path d="M11 16h10M16 11v10" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                <svg
+                  className="w-8 h-8 text-white"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                >
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="15"
+                    stroke="white"
+                    strokeWidth="1.2"
+                  />
+                  <path
+                    d="M11 16h10M16 11v10"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </div>
             </div>
@@ -60,7 +109,13 @@ export function MasonryGallery() {
       </div>
 
       {index !== null && (
-        <Lightbox photos={GALLERY_PHOTOS} index={index} onClose={close} onPrev={prev} onNext={next} />
+        <Lightbox
+          photos={GALLERY_PHOTOS}
+          index={index}
+          onClose={close}
+          onPrev={prev}
+          onNext={next}
+        />
       )}
     </section>
   );

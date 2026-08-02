@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { blogPosts } from '../data/blog';
-import { BlogCard } from '../components/blog/BlogCard';
-import { SectionHeader } from '../components/ui/SectionHeader';
+import React, { useState } from "react";
+import { blogPosts } from "../data/blog";
+import { BlogCard } from "../components/blog/BlogCard";
+import { SectionHeader } from "../components/ui/SectionHeader";
 
 export const Blog: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
+  const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
 
-  const categories = ['ALL', 'FAMILY GUIDES', 'CARE & EDUCATION'];
+  const categories = ["ALL", "FAMILY GUIDES", "CARE & EDUCATION"];
 
   const filteredPosts =
-    selectedCategory === 'ALL'
+    selectedCategory === "ALL"
       ? blogPosts
       : blogPosts.filter((p) => p.category === selectedCategory);
 
@@ -25,7 +25,8 @@ export const Blog: React.FC = () => {
             Family Care & Senior Living Blog
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Practical advice, checklists, and guides from our caregivers to help your family make informed senior care decisions.
+            Practical advice, checklists, and guides from our caregivers to help
+            your family make informed senior care decisions.
           </p>
         </div>
       </section>
@@ -33,7 +34,6 @@ export const Blog: React.FC = () => {
       {/* Main Content */}
       <section className="py-20 bg-brand-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           {/* Category Tabs */}
           <div className="flex items-center justify-center space-x-3 mb-12">
             {categories.map((cat) => (
@@ -42,8 +42,8 @@ export const Blog: React.FC = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all duration-200 cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-navy-800 text-white shadow-md'
-                    : 'bg-white text-navy-950/70 hover:bg-gray-100 border border-gray-200'
+                    ? "bg-navy-800 text-white shadow-md"
+                    : "bg-white text-navy-950/70 hover:bg-gray-100 border border-gray-200"
                 }`}
               >
                 {cat}

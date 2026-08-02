@@ -11,7 +11,10 @@ export const GalleryHero: React.FC = () => {
       <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Breadcrumb */}
         <div className="flex items-center space-x-2 text-xs mb-10">
-          <Link to="/" className="text-[#6B93C4] hover:text-white transition-colors">
+          <Link
+            to="/"
+            className="text-[#6B93C4] hover:text-white transition-colors"
+          >
             Home
           </Link>
           <span className="text-[#1E3D6B]">›</span>
@@ -20,13 +23,15 @@ export const GalleryHero: React.FC = () => {
 
         {/* Heading */}
         <h1 className="font-sans text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight leading-[1.05] mb-6 max-w-[600px]">
-          A look inside<br />
+          A look inside
+          <br />
           <span className="text-[#C9992E] font-normal">our home.</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-base sm:text-lg font-light text-[#A8C3E0] leading-relaxed max-w-[480px]">
-          Every corner of 1st Blessed is designed for comfort, warmth, and dignity. Take a look around.
+          Every corner of 1st Blessed is designed for comfort, warmth, and
+          dignity. Take a look around.
         </p>
 
         {/* Photo Count Badge - Sharp Edges */}

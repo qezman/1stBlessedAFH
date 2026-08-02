@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Plus, Minus, HelpCircle } from 'lucide-react';
-import { FAQItem } from '../../data/faqs';
+import React, { useState } from "react";
+import { Plus, Minus, HelpCircle } from "lucide-react";
+import { FAQItem } from "../../data/faqs";
 
 interface FAQAccordionProps {
   items: FAQItem[];
@@ -22,8 +22,8 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
             key={item.id}
             className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
               isOpen
-                ? 'bg-white border-navy-600/30 shadow-md ring-1 ring-gold-500/20'
-                : 'bg-white border-gray-100 shadow-sm hover:border-gray-200'
+                ? "bg-white border-navy-600/30 shadow-md ring-1 ring-gold-500/20"
+                : "bg-white border-gray-100 shadow-sm hover:border-gray-200"
             }`}
           >
             <button
@@ -33,7 +33,7 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
               <div className="flex items-start space-x-3 pr-4">
                 <HelpCircle
                   className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                    isOpen ? 'text-gold-500' : 'text-navy-600/60'
+                    isOpen ? "text-gold-500" : "text-navy-600/60"
                   }`}
                 />
                 <span className="font-bold text-navy-950 text-base sm:text-lg">
@@ -42,10 +42,16 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
               </div>
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                  isOpen ? 'bg-gold-500 text-white' : 'bg-gray-100 text-navy-800'
+                  isOpen
+                    ? "bg-gold-500 text-white"
+                    : "bg-gray-100 text-navy-800"
                 }`}
               >
-                {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                {isOpen ? (
+                  <Minus className="w-4 h-4" />
+                ) : (
+                  <Plus className="w-4 h-4" />
+                )}
               </div>
             </button>
 

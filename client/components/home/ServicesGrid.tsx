@@ -1,70 +1,71 @@
-import { HeartHandshake, Pill, Utensils, Activity, Smile, LucideIcon, ArrowRight, Check } from 'lucide-react';
-import { servicesData } from '../../data/services';
-import { SectionHeader } from '../ui/SectionHeader';
-import { Button } from '../ui/Button';
-
-const ICON_MAP: Record<string, LucideIcon> = {
-  HeartHandshake,
-  Pill,
-  Utensils,
-  Activity,
-  Smile,
-};
+const SERVICES = [
+  {
+    icon: "🏠",
+    title: "Private Rooms",
+    text: "Comfortable, furnished private rooms in a real home setting — not a ward or shared bay.",
+  },
+  {
+    icon: "💊",
+    title: "Medication Management",
+    text: "Structured medication schedules managed by trained caregivers, every day.",
+  },
+  {
+    icon: "🍽️",
+    title: "Home-Cooked Meals",
+    text: "Three nutritious meals daily prepared in-home. Dietary needs always accommodated.",
+  },
+  {
+    icon: "🛁",
+    title: "Personal Care",
+    text: "Bathing, grooming, dressing, and hygiene assistance provided with dignity and respect.",
+  },
+  {
+    icon: "🩺",
+    title: "Health Monitoring",
+    text: "Regular vital checks, coordination with physicians, and family health updates.",
+  },
+  {
+    icon: "🎯",
+    title: "Activities & Engagement",
+    text: "Daily social activities, light exercises, and enrichment programs to keep minds active.",
+  },
+];
 
 export function ServicesGrid() {
   return (
-    <section className="py-20 bg-brand-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          badge="OUR SERVICES"
-          title="Comprehensive Care Tailored to Every Resident"
-          subtitle="From daily assistance to complex medication oversight, our certified team handles every detail with expertise and kindness."
-        />
+    <section className="py-24 bg-gray-50">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
+        <div className="mb-14 max-w-[520px]">
+          <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-5">
+            <span className="w-5 h-[1px] bg-navy-500" />
+            Our Services
+          </div>
+          <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-tight mb-4">
+            Everything your loved one needs, under one roof.
+          </h2>
+          <p className="text-base font-light text-gray-600 leading-relaxed">
+            Comprehensive care without the complexity — all services are
+            included.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.map((s) => {
-            const Icon = ICON_MAP[s.iconName] ?? HeartHandshake;
-            return (
-              <div
-                key={s.id}
-                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-gold-50 group-hover:bg-gold-500/20 flex items-center justify-center mb-6 transition-colors">
-                    <Icon className="w-6 h-6 text-gold-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-navy-950 mb-3">{s.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">{s.shortDesc}</p>
-                  <ul className="space-y-2 border-t border-gray-100 pt-4 mb-6">
-                    {s.highlights.map((h) => (
-                      <li key={h} className="flex items-center space-x-2 text-xs font-medium text-gray-700">
-                        <Check className="w-4 h-4 text-gold-500 flex-shrink-0" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <Button to="/contact" variant="outline" size="sm" className="w-full">
-                  Enquire About This Service <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-gray-200 border border-gray-200 rounded-none overflow-hidden">
+          {SERVICES.map((svc, i) => (
+            <div
+              key={i}
+              className="bg-white p-8 sm:p-9 flex flex-col gap-4 hover:bg-navy-50/30 transition-colors"
+            >
+              <div className="w-11 h-11 bg-navy-50 rounded-none flex items-center justify-center text-xl">
+                {svc.icon}
               </div>
-            );
-          })}
-
-          <div className="bg-gradient-to-br from-navy-950 to-navy-800 rounded-2xl p-8 text-white flex flex-col justify-between border border-navy-600 shadow-md">
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-gold-400 block mb-2">
-                Need Customized Support?
-              </span>
-              <h3 className="text-2xl font-bold text-white mb-4">Have specific health or mobility requirements?</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Every resident receives a personalized DSHS care assessment prior to move-in. We tailor staffing and care routines around your family's exact needs.
+              <h3 className="text-[17px] font-medium text-navy-950 tracking-[-0.01em]">
+                {svc.title}
+              </h3>
+              <p className="text-sm font-light text-gray-600 leading-relaxed">
+                {svc.text}
               </p>
             </div>
-            <div className="pt-6">
-              <Button to="/contact" variant="gold" size="md" className="w-full">Speak With Our Care Manager</Button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
