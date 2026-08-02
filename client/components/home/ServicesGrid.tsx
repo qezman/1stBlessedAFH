@@ -1,31 +1,40 @@
+import {
+  Home,
+  BriefcaseMedical,
+  Utensils,
+  HeartHandshake,
+  Syringe,
+  Activity,
+} from "lucide-react";
+
 const SERVICES = [
   {
-    icon: "🏠",
+    icon: Home,
     title: "Private Rooms",
     text: "Comfortable, furnished private rooms in a real home setting — not a ward or shared bay.",
   },
   {
-    icon: "💊",
-    title: "Medication Management",
-    text: "Structured medication schedules managed by trained caregivers, every day.",
+    icon: BriefcaseMedical,
+    title: "Specialized Care",
+    text: "Memory care, mental health support, and full medication and insulin management.",
   },
   {
-    icon: "🍽️",
+    icon: Utensils,
     title: "Home-Cooked Meals",
     text: "Three nutritious meals daily prepared in-home. Dietary needs always accommodated.",
   },
   {
-    icon: "🛁",
+    icon: HeartHandshake,
     title: "Personal Care",
     text: "Bathing, grooming, dressing, and hygiene assistance provided with dignity and respect.",
   },
   {
-    icon: "🩺",
+    icon: Syringe,
     title: "Health Monitoring",
     text: "Regular vital checks, coordination with physicians, and family health updates.",
   },
   {
-    icon: "🎯",
+    icon: Activity,
     title: "Activities & Engagement",
     text: "Daily social activities, light exercises, and enrichment programs to keep minds active.",
   },
@@ -33,39 +42,43 @@ const SERVICES = [
 
 export function ServicesGrid() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-20 sm:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <div className="mb-14 max-w-[520px]">
-          <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-5">
-            <span className="w-5 h-[1px] bg-navy-500" />
-            Our Services
+        <div className="mb-14 max-w-[500px]">
+          <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#1A3358] mb-5">
+            — OUR SERVICES
           </div>
-          <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-tight mb-4">
-            Everything your loved one needs, under one roof.
+          <h2 className="font-sans text-3xl sm:text-4xl lg:text-[42px] font-light text-[#0B1628] tracking-[-0.025em] leading-[1.15] mb-5">
+            Everything your loved one
+            <br />
+            needs, under one roof.
           </h2>
-          <p className="text-base font-light text-gray-600 leading-relaxed">
+          <p className="text-sm sm:text-base font-light text-gray-600 leading-[1.7]">
             Comprehensive care without the complexity — all services are
             included.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-gray-200 border border-gray-200 rounded-none overflow-hidden">
-          {SERVICES.map((svc, i) => (
-            <div
-              key={i}
-              className="bg-white p-8 sm:p-9 flex flex-col gap-4 hover:bg-navy-50/30 transition-colors"
-            >
-              <div className="w-11 h-11 bg-navy-50 rounded-none flex items-center justify-center text-xl">
-                {svc.icon}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          {SERVICES.map((svc, i) => {
+            const Icon = svc.icon;
+            return (
+              <div
+                key={i}
+                className="bg-white border border-[#E9ECEF] rounded-2xl p-8 flex flex-col items-start shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="w-11 h-11 bg-[#EEF5FC] rounded-xl flex items-center justify-center mb-6 text-[#1A3358]">
+                  <Icon className="w-5 h-5 stroke-[1.75]" />
+                </div>
+                <h3 className="text-[18px] font-semibold text-[#0B1628] tracking-[-0.015em] mb-3">
+                  {svc.title}
+                </h3>
+                <p className="text-sm font-light text-gray-600 leading-[1.7]">
+                  {svc.text}
+                </p>
               </div>
-              <h3 className="text-[17px] font-medium text-navy-950 tracking-[-0.01em]">
-                {svc.title}
-              </h3>
-              <p className="text-sm font-light text-gray-600 leading-relaxed">
-                {svc.text}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
