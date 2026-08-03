@@ -1,82 +1,78 @@
 import { Link } from "react-router-dom";
-import { Button } from "../ui/Button";
+import { ArrowRight } from "lucide-react";
 
 const META_ITEMS = [
-  { val: "6", label: "Residents max" },
+  { val: "12", label: "Residents" },
   { val: "24/7", label: "On-site care" },
   { val: "100%", label: "Family satisfaction" },
 ];
 
 export function HeroSection() {
   return (
-    <section className="min-h-[calc(100vh-72px)] bg-white grid grid-cols-1 lg:grid-cols-2 max-w-full pt-20 lg:pt-0">
-      <div className="flex flex-col justify-center px-6 sm:px-12 lg:px-16 py-12 lg:py-20 max-w-[660px] mx-auto lg:mx-0">
-        <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-7">
-          <span className="w-5 h-[1px] bg-navy-500" />
-          Everett, Washington · Licensed Adult Family Home
-        </div>
-
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[60px] font-light leading-[1.2] tracking-[-0.03em] text-navy-950 mb-6">
-          Senior care that
-          <br />
-          feels like <span className="font-semibold">home.</span>
-        </h1>
-
-        <p className="text-base sm:text-[17px] font-light leading-[1.75] text-gray-600 mb-10 max-w-[440px]">
-          A private, six-resident home in Everett providing 24-hour personalized
-          care. Not a facility — a family. Where dignity, comfort, and
-          compassion come first.
-        </p>
-
-        <div className="flex flex-wrap gap-3 mb-12">
-          <Button to="/contact" variant="gold" size="lg">
-            Schedule a Tour →
-          </Button>
-          <Button to="/gallery" variant="outline" size="lg">
-            See Our Home
-          </Button>
-        </div>
-
-        <div className="w-10 h-[1px] bg-gray-200 mb-6" />
-
-        <div className="flex gap-8">
-          {META_ITEMS.map((m) => (
-            <div key={m.label} className="flex flex-col gap-1">
-              <span className="text-2xl font-semibold text-navy-950 tracking-[-0.02em]">
-                {m.val}
-              </span>
-              <span className="text-xs font-normal text-gray-600 tracking-[0.02em]">
-                {m.label}
-              </span>
+    <section className="bg-[#FAFAFC] pt-[72px]">
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[calc(100vh-72px)] py-16 lg:py-20">
+          {/* Left column */}
+          <div className="flex flex-col">
+            {/* Label */}
+            <div className="flex items-center gap-2.5 text-[11px] font-medium tracking-[0.08em] uppercase text-[#0B1628] mb-10">
+              <span className="w-5 h-px bg-[#0B1628]" />
+              Everett, Washington · Licensed Adult Family Home
             </div>
-          ))}
-        </div>
-      </div>
 
-      <div className="bg-navy-50 relative overflow-hidden flex items-center justify-center p-8 sm:p-12 lg:p-16">
-        <div className="absolute w-[400px] h-[400px] rounded-full bg-navy-500/5 -top-24 -right-24" />
-        <div className="absolute w-[240px] h-[240px] rounded-full bg-gold-500/5 bottom-10 left-5" />
+            {/* Heading */}
+            <h1 className="font-sans text-[42px] sm:text-[52px] lg:text-[64px] font-light leading-[1.15] tracking-[-0.03em] text-[#0B1628] mb-8">
+              Senior care that
+              <br />
+              feels like home.
+            </h1>
 
-        <div className="relative z-10 flex items-center justify-center w-full max-w-[460px] aspect-[4/5] rounded-none overflow-hidden border border-navy-100 shadow-xl group">
-          <img
-            src="https://framerusercontent.com/assets/NAzYO2o1MS3dK9Xa3ksU5oCAREU.jpg"
-            alt="1st Blessed Adult Family Home exterior"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
+            {/* Description */}
+            <p className="text-[16px] font-light leading-[1.8] text-[#495057] mb-12 max-w-[460px]">
+              A private, twelve-resident home in Everett providing 24-hour
+              personalized care. Not a facility — a family. Where dignity,
+              comfort, and compassion come first.
+            </p>
 
-          <div className="absolute bottom-4 left-4 bg-white rounded-none p-4 shadow-lg border border-gray-100 min-w-[180px]">
-            <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-gray-500 mb-1">
-              Google Rating
+            {/* Buttons */}
+            <div className="flex flex-wrap items-center gap-4 mb-16">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2.5 bg-[#2B1E78] hover:bg-[#221766] text-white text-[15px] font-medium pl-6 pr-5 py-3.5 rounded-lg transition-colors"
+              >
+                <span>Schedule a tour</span>
+                <ArrowRight className="w-[18px] h-[18px]" />
+              </Link>
+              <Link
+                to="/gallery"
+                className="inline-flex items-center text-[15px] font-medium text-[#0B1628] border border-[#DEE2E6] hover:border-[#2B1E78] hover:text-[#2B1E78] px-6 py-3.5 rounded-lg transition-colors"
+              >
+                See our Home
+              </Link>
             </div>
-            <div className="text-xl font-semibold text-navy-950 tracking-[-0.02em]">
-              ★ 5.0{" "}
-              <span className="text-xs font-light text-gray-500">/ 5.0</span>
+
+            {/* Stats */}
+            <div className="flex gap-12 sm:gap-16">
+              {META_ITEMS.map((m) => (
+                <div key={m.label} className="flex flex-col gap-1">
+                  <span className="text-[36px] sm:text-[42px] font-light leading-none text-[#0B1628] tracking-[-0.03em]">
+                    {m.val}
+                  </span>
+                  <span className="text-sm font-normal text-[#6C757D] tracking-[0.01em]">
+                    {m.label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="absolute top-4 right-4 bg-success text-white rounded-none px-4 py-2 flex items-center gap-2 text-xs font-medium shadow-md">
-            <span className="w-2 h-2 rounded-full bg-[#7DFFC4] animate-pulse" />
-            Now accepting
+          {/* Right column — image */}
+          <div className="overflow-hidden rounded-xl">
+            <img
+              src="/hero-img.jpg"
+              alt="Caregivers and a resident at 1st Blessed Adult Family Home"
+              className="w-full h-auto object-cover aspect-[4/5] lg:aspect-auto lg:max-h-[680px]"
+            />
           </div>
         </div>
       </div>

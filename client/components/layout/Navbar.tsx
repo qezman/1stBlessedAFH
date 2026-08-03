@@ -18,36 +18,36 @@ export function Navbar() {
   useEffect(() => setMenuOpen(false), [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/75 backdrop-blur-md border-b border-gray-200/60 py-3 transition-all duration-200">
-      <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <div className="flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 transition-all duration-200">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12">
+        <div className="flex h-[72px] items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="w-7 h-7 rounded bg-[#253675] flex items-center justify-center text-white flex-shrink-0 transition-colors group-hover:bg-[#1A3358]">
-              <Home className="w-3.5 h-3.5" />
+          <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
+            <div className="w-9 h-9 rounded-lg bg-[#2B1E78] flex items-center justify-center text-white flex-shrink-0 transition-colors group-hover:bg-[#221766]">
+              <Home className="w-4 h-4" />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="font-medium text-sm text-[#0B1628]">
+              <span className="font-normal text-[15px] text-[#0B1628]">
                 1st Blessed
               </span>
-              <span className="text-[11px] font-light text-gray-500">
+              <span className="text-[13px] font-light text-[#3366A8]">
                 Adult Family Home
               </span>
             </div>
           </Link>
 
-          {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-7">
+          {/* Navigation Links — centered */}
+          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
             {NAV_LINKS.map(({ name, path }) => {
               const active = pathname === path;
               return (
                 <Link
                   key={path}
                   to={path}
-                  className={`text-xs transition-colors hover:text-[#1A3358] ${
+                  className={`text-[14px] transition-colors hover:text-[#2B1E78] ${
                     active
-                      ? "text-[#25508A] font-medium"
-                      : "text-[#0B1628]/80 font-normal"
+                      ? "text-[#2B1E78] font-normal"
+                      : "text-[#495057] font-light"
                   }`}
                 >
                   {name}
@@ -57,21 +57,28 @@ export function Navbar() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center flex-shrink-0">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-1.5 bg-[#253675] hover:bg-[#1A3358] text-white text-xs font-medium px-4 py-2 rounded-md transition-colors"
+              className="inline-flex items-center gap-3 bg-[#2B1E78] hover:bg-[#221766] text-white text-[14px] font-normal pl-6 pr-5 py-3 rounded-lg transition-colors"
             >
               <span>Schedule a Tour</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Mobile Menu Trigger */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center gap-3 md:hidden">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-1.5 bg-[#2B1E78] text-white text-xs font-normal px-4 py-2.5 rounded-lg"
+            >
+              Tour
+              <ArrowRight className="w-3 h-3" />
+            </Link>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-1.5 rounded text-[#0B1628] hover:bg-gray-100/60 focus:outline-none"
+              className="p-2 rounded-lg text-[#0B1628] hover:bg-gray-100 focus:outline-none"
               aria-label="Toggle menu"
             >
               {menuOpen ? (
@@ -86,31 +93,31 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[53px] bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg p-6">
-          <nav className="flex flex-col gap-3">
+        <div className="md:hidden fixed inset-x-0 top-[72px] bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg p-6">
+          <nav className="flex flex-col gap-2">
             {NAV_LINKS.map(({ name, path }) => {
               const active = pathname === path;
               return (
                 <Link
                   key={path}
                   to={path}
-                  className={`text-sm py-2 px-3 rounded transition-colors ${
+                  className={`text-sm py-2.5 px-4 rounded-lg transition-colors ${
                     active
-                      ? "bg-[#EEF5FC] text-[#25508A] font-medium"
-                      : "text-[#0B1628] hover:bg-gray-50"
+                      ? "bg-[#EEF5FC] text-[#2B1E78] font-normal"
+                      : "text-[#0B1628] font-light hover:bg-gray-50"
                   }`}
                 >
                   {name}
                 </Link>
               );
             })}
-            <div className="pt-3 mt-1 border-t border-gray-100">
+            <div className="pt-4 mt-2 border-t border-gray-100">
               <Link
                 to="/contact"
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#253675] text-white text-xs font-medium py-3 rounded"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#2B1E78] text-white text-sm font-normal py-3 rounded-lg"
               >
                 <span>Schedule a Tour</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </nav>
