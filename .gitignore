@@ -5,6 +5,11 @@ node_modules
 # Production build
 dist
 
+# Next.js build output
+.next/
+out/
+*.tsbuildinfo
+
 # Environment / local configs
 .env
 .env.local
