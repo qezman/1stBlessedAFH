@@ -46,8 +46,8 @@ export function OurStory() {
           <div className="w-full aspect-[3/4] rounded-none overflow-hidden border border-gray-100 shadow-lg">
             <img
               src="/Founder.jpg"
-              alt="1st Blessed Adult Family Home exterior"
-              className="w-full h-full object-cover"
+              alt="1st Blessed Adult Family Home founder"
+              className="w-full h-full object-cover object-top"
             />
           </div>
 
