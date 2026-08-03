@@ -45,8 +45,8 @@ export function OurStory() {
 
           <div className="w-full aspect-[3/4] rounded-none overflow-hidden border border-gray-100 shadow-lg">
             <img
-              src="https://framerusercontent.com/assets/xkjm8YFt86QMxl6KrvoqMGtrSI0.jpg"
-              alt="1st Blessed Adult Family Home"
+              src="/Founder.jpg"
+              alt="1st Blessed Adult Family Home exterior"
               className="w-full h-full object-cover"
             />
           </div>

@@ -13,9 +13,9 @@ const PRIVACY_SECTIONS: LegalSection[] = [
           regarding that information.
         </p>
         <p>
-          By using this Site, you agree to the collection and use of
-          information as described in this policy. If you do not agree, please
-          do not use the Site.
+          By using this Site, you agree to the collection and use of information
+          as described in this policy. If you do not agree, please do not use
+          the Site.
         </p>
       </>
     ),
@@ -27,9 +27,9 @@ const PRIVACY_SECTIONS: LegalSection[] = [
         <p>We collect information in the following ways:</p>
         <ul>
           <li>
-            <strong>Information you provide directly</strong> — When you fill out
-            our contact form, you may provide your name, email address, phone
-            number, and any details you include in your message.
+            <strong>Information you provide directly</strong> — When you fill
+            out our contact form, you may provide your name, email address,
+            phone number, and any details you include in your message.
           </li>
           <li>
             <strong>Automatically collected information</strong> — Like most
@@ -145,9 +145,9 @@ const PRIVACY_SECTIONS: LegalSection[] = [
       <>
         <p>
           Depending on your location, you may have certain rights regarding your
-          personal information, including the right to access, correct, or delete
-          information we hold about you. To exercise any of these rights, please
-          contact us at:
+          personal information, including the right to access, correct, or
+          delete information we hold about you. To exercise any of these rights,
+          please contact us at:
         </p>
         <ul>
           <li>
@@ -182,8 +182,8 @@ const PRIVACY_SECTIONS: LegalSection[] = [
     content: (
       <>
         <p>
-          If you have any questions or concerns about this Privacy Policy, please
-          reach out:
+          If you have any questions or concerns about this Privacy Policy,
+          please reach out:
         </p>
         <ul>
           <li>

@@ -19,7 +19,7 @@ export function AboutSnapshot() {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <img
-                src="https://framerusercontent.com/assets/xkjm8YFt86QMxl6KrvoqMGtrSI0.jpg"
+                src="/WhatsApp Image 2026-04-01 at 10.39.09 PM.jpg"
                 alt="Caregivers and family environment at 1st Blessed"
                 className="w-full h-[450px] object-cover"
               />

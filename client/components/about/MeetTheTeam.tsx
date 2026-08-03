@@ -2,18 +2,28 @@ import { Plus } from "lucide-react";
 
 const TEAM = [
   {
-    name: "[Caregiver Name]",
-    role: "Founder & Lead Caregiver",
-    bio: "Replace with a 2–3 sentence bio. Include training, certifications, years of experience, and a personal touch about why they care for seniors.",
-    photo:
-      "https://framerusercontent.com/assets/NAzYO2o1MS3dK9Xa3ksU5oCAREU.jpg",
+    name: "Abbey Hamilton, RN",
+    role: "Registered Nurse & Care Director",
+    bio: "Over 12 years of clinical experience in senior health and post-acute rehabilitation care.",
+    photo: "/Abbey Hamilton is a registered nurse who completed….jpg",
   },
   {
-    name: "[Caregiver Name]",
-    role: "Caregiver",
-    bio: "Replace with a genuine bio. Families read these carefully — a real photo and real words matter more than stock anything.",
-    photo:
-      "https://framerusercontent.com/assets/xkjm8YFt86QMxl6KrvoqMGtrSI0.jpg",
+    name: "Dr. Chinasa Linda Atuegwu",
+    role: "Medical Care Advisor",
+    bio: "Dedicated healthcare professional providing oversight and guidance on resident health plans.",
+    photo: "/Dr_ Mrs Atuegwu Chinasa Linda (Ezeoma)….jpg",
+  },
+  {
+    name: "Carol Silva",
+    role: "Senior Care Specialist",
+    bio: "Specializes in dementia care, daily vital monitoring, and personalized wellness routines.",
+    photo: "/Médica @loocarol senhoras e senhores__#fotografos….jpg",
+  },
+  {
+    name: "Linda Ezeoma",
+    role: "Resident Care Coordinator",
+    bio: "Passionate about creating a loving, respectful, and joyful home environment for all residents.",
+    photo: "/Retratos de marca personal para la bella doctora….jpg",
   },
 ];
 
@@ -30,10 +40,10 @@ export function MeetTheTeam() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {TEAM.map((member, i) => (
             <div key={i} className="flex flex-col">
-              <div className="w-full aspect-[3/4] rounded-none overflow-hidden mb-5 relative">
+              <div className="w-full aspect-[3/4] rounded-lg overflow-hidden mb-4 relative border border-gray-100 shadow-sm">
                 <img
                   src={member.photo}
                   alt={member.name}
@@ -41,30 +51,17 @@ export function MeetTheTeam() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#C9992E]" />
               </div>
-              <h3 className="text-lg font-medium text-[#0B1628] tracking-[-0.01em] mb-1">
+              <h3 className="text-base font-medium text-[#0B1628] tracking-[-0.01em] mb-0.5">
                 {member.name}
               </h3>
-              <span className="text-xs font-semibold text-[#25508A] tracking-[0.1em] uppercase mb-3">
+              <span className="text-[11px] font-semibold text-[#25508A] tracking-[0.08em] uppercase mb-2">
                 {member.role}
               </span>
-              <p className="text-sm font-light text-gray-500 leading-[1.75]">
+              <p className="text-xs font-light text-gray-500 leading-relaxed">
                 {member.bio}
               </p>
             </div>
           ))}
-
-          <div className="flex flex-col">
-            <div className="w-full aspect-[3/4] bg-gray-50 border border-dashed border-gray-300 rounded-none mb-5 flex items-center justify-center">
-              <Plus className="w-8 h-8 text-gray-300" />
-            </div>
-            <span className="text-xs font-semibold text-[#25508A] tracking-[0.1em] uppercase mb-3">
-              Our team is growing
-            </span>
-            <p className="text-sm font-light text-gray-500 leading-[1.75]">
-              We carefully select every caregiver for skill, empathy, and
-              character. As we grow, we'll introduce you to each person here.
-            </p>
-          </div>
         </div>
       </div>
     </section>

@@ -74,7 +74,8 @@ export function LegalPage({
                 Questions?
               </div>
               <div className="text-xs font-light text-gray-500 leading-relaxed mb-2.5">
-                If you have questions about this policy, please contact us directly.
+                If you have questions about this policy, please contact us
+                directly.
               </div>
               <a
                 href="mailto:1stblessedafh@gmail.com"

@@ -7,15 +7,15 @@ const TERMS_SECTIONS: LegalSection[] = [
       <>
         <p>
           By accessing and using the website at{" "}
-          <strong>1stblessedafh.com</strong> (the "Site"), you accept and agree to
-          be bound by these Terms of Use. If you do not agree to these terms,
+          <strong>1stblessedafh.com</strong> (the "Site"), you accept and agree
+          to be bound by these Terms of Use. If you do not agree to these terms,
           please do not use the Site.
         </p>
         <p>
           These Terms of Use apply to all visitors, users, and others who access
           or use the Site. They do not govern the provision of care services,
-          which are subject to separate care agreements between 1st Blessed Adult
-          Family Home and residents or their families.
+          which are subject to separate care agreements between 1st Blessed
+          Adult Family Home and residents or their families.
         </p>
       </>
     ),
@@ -25,9 +25,9 @@ const TERMS_SECTIONS: LegalSection[] = [
     content: (
       <>
         <p>
-          You agree to use this Site only for lawful purposes and in a manner that
-          does not infringe the rights of others. Specifically, you agree not
-          to:
+          You agree to use this Site only for lawful purposes and in a manner
+          that does not infringe the rights of others. Specifically, you agree
+          not to:
         </p>
         <ul>
           <li>
@@ -74,16 +74,16 @@ const TERMS_SECTIONS: LegalSection[] = [
     content: (
       <>
         <p>
-          All content on this Site — including text, images, graphics, logos, and
-          the overall design — is the property of 1st Blessed Adult Family Home
-          or its content suppliers, and is protected by applicable intellectual
-          property laws.
+          All content on this Site — including text, images, graphics, logos,
+          and the overall design — is the property of 1st Blessed Adult Family
+          Home or its content suppliers, and is protected by applicable
+          intellectual property laws.
         </p>
         <p>
           You may view and print pages from this Site for your personal,
           non-commercial use only. You may not reproduce, distribute, modify,
-          transmit, or otherwise use any content from this Site without our prior
-          written permission.
+          transmit, or otherwise use any content from this Site without our
+          prior written permission.
         </p>
       </>
     ),
@@ -94,10 +94,10 @@ const TERMS_SECTIONS: LegalSection[] = [
       <>
         <p>
           This Site may contain links to third-party websites, including Google
-          Maps, social media platforms, and government resources. These links are
-          provided for convenience only. We have no control over the content of
-          those sites and accept no responsibility for them or for any loss or
-          damage that may arise from your use of them.
+          Maps, social media platforms, and government resources. These links
+          are provided for convenience only. We have no control over the content
+          of those sites and accept no responsibility for them or for any loss
+          or damage that may arise from your use of them.
         </p>
         <p>
           Inclusion of any linked website does not imply our endorsement or
