@@ -7,7 +7,7 @@ export function AboutHero() {
       <div className="absolute w-[300px] h-[300px] rounded-full bg-[rgba(201,153,46,0.06)] -bottom-[100px] left-[200px]" />
 
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12 relative z-10">
-        <div className="flex items-center gap-2 mb-10">
+        <div className="text-white flex items-center gap-2 mb-10">
           <Link
             to="/"
             className="text-xs font-normal text-navy-300 hover:text-white transition-colors tracking-wide"
