@@ -1,0 +1,12 @@
+{
+  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/faqs/page": "app/faqs/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/terms-of-use/page": "app/terms-of-use/page.js",
+  "/privacypolicy/page": "app/privacypolicy/page.js"
+}
