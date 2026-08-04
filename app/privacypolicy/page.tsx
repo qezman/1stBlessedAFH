@@ -1,11 +1,13 @@
 import { LegalPage, LegalSection } from "@/components/legal/LegalPage";
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
   description:
     "How 1st Blessed Adult Family Home collects, uses, and protects information on this website.",
-};
+  path: "/privacypolicy",
+});
 
 const PRIVACY_SECTIONS: LegalSection[] = [
   {

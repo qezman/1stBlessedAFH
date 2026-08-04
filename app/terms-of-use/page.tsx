@@ -1,11 +1,13 @@
 import { LegalPage, LegalSection } from "@/components/legal/LegalPage";
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Terms of Use",
   description:
     "The terms and conditions governing your use of the 1st Blessed Adult Family Home website.",
-};
+  path: "/terms-of-use",
+});
 
 const TERMS_SECTIONS: LegalSection[] = [
   {

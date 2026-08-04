@@ -21,3 +21,13 @@ pnpm dev
 ```bash
 pnpm build
 ```
+
+## Contact form email
+
+The contact form sends email through Resend. Copy `.env.example` to `.env.local`,
+set `RESEND_API_KEY`, and use a Resend-verified sender in `CONTACT_FROM_EMAIL`.
+
+## Accessibility widget
+
+Set `NEXT_PUBLIC_USERWAY_ACCOUNT` to the account ID in your UserWay embed code.
+The accessibility menu then loads across the site.
