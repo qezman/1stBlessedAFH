@@ -70,6 +70,7 @@ export function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -80,6 +81,7 @@ export function ContactForm() {
     setForm((prev) => ({ ...prev, [name]: value }));
     if (errors[name as keyof FormErrors])
       setErrors((prev) => ({ ...prev, [name]: "" }));
+    if (submitError) setSubmitError("");
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -90,10 +92,30 @@ export function ContactForm() {
       return;
     }
     setSending(true);
-    // TODO: replace with real endpoint e.g. Formspree
-    await new Promise((r) => setTimeout(r, 1400));
-    setSending(false);
-    setSent(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const result = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error || "Unable to send your message.");
+      }
+
+      setSent(true);
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Unable to send your message. Please try again or call us directly.",
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   const fieldClass = (name: keyof FormErrors) =>
@@ -223,6 +245,12 @@ export function ContactForm() {
         Your information is used only to respond to your enquiry. We don't share
         it with third parties.
       </p>
+
+      {submitError && (
+        <p role="alert" className="text-sm text-red-600">
+          {submitError}
+        </p>
+      )}
 
       <button
         type="submit"

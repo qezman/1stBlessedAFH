@@ -5,25 +5,25 @@ const TEAM = [
     name: "Abbey Hamilton, RN",
     role: "Registered Nurse & Care Director",
     bio: "Over 12 years of clinical experience in senior health and post-acute rehabilitation care.",
-    photo: "/Abbey Hamilton is a registered nurse who completed….jpg",
+    photo: "/Abbey.jpg",
   },
   {
     name: "Dr. Chinasa Linda Atuegwu",
     role: "Medical Care Advisor",
     bio: "Dedicated healthcare professional providing oversight and guidance on resident health plans.",
-    photo: "/Dr_ Mrs Atuegwu Chinasa Linda (Ezeoma)….jpg",
+    photo: "/Linda.jpg",
   },
   {
     name: "Carol Silva",
     role: "Senior Care Specialist",
     bio: "Specializes in dementia care, daily vital monitoring, and personalized wellness routines.",
-    photo: "/Médica @loocarol senhoras e senhores__#fotografos….jpg",
+    photo: "/Carol.jpg",
   },
   {
     name: "Linda Ezeoma",
     role: "Resident Care Coordinator",
     bio: "Passionate about creating a loving, respectful, and joyful home environment for all residents.",
-    photo: "/Retratos de marca personal para la bella doctora….jpg",
+    photo: "/Ezeoma.jpg",
   },
 ];
 

@@ -41,8 +41,8 @@ export const GalleryHero: React.FC = () => {
         </div>
       </div>
 
-      {/* Wave Separator */}
-      <div className="absolute bottom-0 left-0 right-0 leading-none z-10 pointer-events-none">
+      {/* Overlap the page below by one pixel to avoid a seam under the wave. */}
+      <div className="absolute bottom-0 left-0 right-0 leading-none z-10 pointer-events-none -mb-px">
         <svg viewBox="0 0 1440 48" fill="none" className="w-full h-auto block">
           <path
             d="M0 48V24C360 0 720 48 1080 24C1260 12 1380 48 1440 48H0Z"
