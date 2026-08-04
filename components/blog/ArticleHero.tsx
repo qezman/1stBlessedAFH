@@ -33,7 +33,7 @@ export function ArticleHero({ post }: { post: FullPost }) {
         {/* Header */}
         <div className="max-w-[760px] mb-12">
           <CategoryPill label={post.category} />
-          <div className="flex items-center gap-3 text-xs font-light text-gray-400 mb-6">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-light text-gray-400 mb-6">
             <span>{post.date}</span>
             <span className="w-1 h-1 rounded-full bg-gray-300" />
             <span>{post.readTime}</span>
@@ -59,11 +59,11 @@ export function ArticleHero({ post }: { post: FullPost }) {
         </div>
 
         {/* Share row */}
-        <div className="flex items-center justify-between py-5 border-t border-b border-gray-100 mt-8">
+        <div className="flex flex-col items-start gap-3 py-5 border-t border-b border-gray-100 mt-8 sm:flex-row sm:items-center sm:justify-between">
           <span className="text-[11px] font-semibold tracking-[0.08em] uppercase text-gray-400">
             Share this article
           </span>
-          <div className="flex gap-2">
+          <div className="flex w-full flex-wrap gap-2 sm:w-auto">
             {[
               {
                 label: "Facebook",

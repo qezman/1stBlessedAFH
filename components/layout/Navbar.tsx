@@ -40,7 +40,7 @@ export function Navbar() {
           </Link>
 
           {/* Navigation Links — centered */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+          <nav className="hidden lg:flex items-center gap-7 xl:gap-10">
             {NAV_LINKS.map(({ name, path }) => {
               const active = pathname === path;
               return (
@@ -60,7 +60,7 @@ export function Navbar() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center flex-shrink-0">
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <Link
               href="/contact"
               className="inline-flex items-center gap-3 bg-[#2B1E78] hover:bg-[#221766] text-white text-[14px] font-normal pl-6 pr-5 py-3 rounded-lg transition-colors"
@@ -71,7 +71,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Trigger */}
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-3 lg:hidden">
             <Link
               href="/contact"
               className="inline-flex items-center gap-1.5 bg-[#2B1E78] text-white text-xs font-normal px-4 py-2.5 rounded-lg"
@@ -96,7 +96,7 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[72px] bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg p-6">
+        <div className="lg:hidden fixed inset-x-0 top-[72px] bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg p-4 sm:p-6">
           <nav className="flex flex-col gap-2">
             {NAV_LINKS.map(({ name, path }) => {
               const active = pathname === path;

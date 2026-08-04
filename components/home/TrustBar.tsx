@@ -25,7 +25,7 @@ export function TrustBar() {
   return (
     <section className="bg-[#0A1220] py-14 sm:py-16">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {TRUST_ITEMS.map((item, i) => (
             <div key={i} className="flex flex-col">
               <div className="font-sans text-5xl sm:text-[56px] font-light text-white tracking-tight leading-none mb-4 flex items-baseline">

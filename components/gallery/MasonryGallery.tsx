@@ -66,7 +66,7 @@ export function MasonryGallery() {
           </div>
         </div>
 
-        <div className="columns-1 sm:columns-2 md:columns-3 xl:columns-4 gap-3 space-y-3">
+        <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {GALLERY_PHOTOS.map((photo, i) => (
             <div
               key={photo.id}
@@ -75,13 +75,12 @@ export function MasonryGallery() {
               tabIndex={0}
               aria-label={`View photo: ${photo.caption}`}
               onKeyDown={(e) => e.key === "Enter" && open(i)}
-              className="break-inside-avoid relative overflow-hidden cursor-pointer group block"
+              className="group relative block aspect-[3/4] cursor-pointer overflow-hidden"
             >
               <img
                 src={photo.src}
                 alt={photo.caption}
-                style={{ height: photo.height }}
-                className="w-full object-cover block transition-transform duration-500 group-hover:scale-105"
+                className="block h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-[#0B1628]/45 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-250">

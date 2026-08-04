@@ -24,7 +24,7 @@ export const GalleryCTA: React.FC = () => {
         </div>
 
         {/* Right buttons - Matching rounded-lg style */}
-        <div className="lg:col-span-4 flex flex-col space-y-3.5 shrink-0 min-w-[260px] w-full sm:w-auto">
+        <div className="lg:col-span-4 flex flex-col space-y-3.5 shrink-0 min-w-0 sm:min-w-[260px] w-full sm:w-auto">
           <a
             href="tel:+12063030549"
             className="inline-flex items-center justify-center gap-2 bg-[#E5B248] text-white border border-[#E5B248] px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center hover:bg-transparent hover:text-[#E5B248]"

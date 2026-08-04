@@ -189,11 +189,11 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     height: "310px",
     category: "Interior",
   },
-  {
-    id: 27,
-    caption: "Single-Story Facility Layout",
-    src: "/Job #22345 Duplex - Middle Housing Design Co.jpg",
-    height: "360px",
-    category: "Exterior",
-  },
+  // {
+  //   id: 27,
+  //   caption: "Single-Story Facility Layout",
+  //   src: "/Job #22345 Duplex - Middle Housing Design Co.jpg",
+  //   height: "360px",
+  //   category: "Exterior",
+  // },
 ];
