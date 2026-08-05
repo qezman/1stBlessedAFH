@@ -6,6 +6,8 @@ export interface GalleryPhoto {
   category?: string;
 }
 
+export const HOME_GALLERY_PREVIEW_PHOTO_IDS = [22, 20, 21, 23, 24];
+
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
     id: 1,
@@ -142,52 +144,52 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
   },
   {
     id: 20,
-    caption: "Spacious Garden & Yard",
+    caption: "Resident Bedroom & Sitting Area",
     src: "/WhatsApp Image 2026-04-01 at 10.39.33 PM.jpg",
     height: "370px",
-    category: "Outdoors",
-  },
-  {
-    id: 21,
-    caption: "Caregiver & Activity Lounge",
-    src: "/WhatsApp Image 2026-04-01 at 10.39.34 PM (1).jpg",
-    height: "300px",
-    category: "Living",
-  },
-  {
-    id: 22,
-    caption: "Resident Dining Table",
-    src: "/WhatsApp Image 2026-04-01 at 10.39.34 PM.jpg",
-    height: "260px",
-    category: "Dining",
-  },
-  {
-    id: 23,
-    caption: "Sunlit Bedroom View",
-    src: "/WhatsApp Image 2026-04-01 at 10.39.35 PM (1).jpg",
-    height: "350px",
     category: "Bedrooms",
   },
   {
+    id: 21,
+    caption: "Accessible Bathroom",
+    src: "/WhatsApp Image 2026-04-01 at 10.39.34 PM (1).jpg",
+    height: "300px",
+    category: "Bathrooms",
+  },
+  {
+    id: 22,
+    caption: "Private Resident Bedroom",
+    src: "/WhatsApp Image 2026-04-01 at 10.39.34 PM.jpg",
+    height: "260px",
+    category: "Bedrooms",
+  },
+  {
+    id: 23,
+    caption: "Accessible Walk-In Shower",
+    src: "/WhatsApp Image 2026-04-01 at 10.39.35 PM (1).jpg",
+    height: "350px",
+    category: "Bathrooms",
+  },
+  {
     id: 24,
-    caption: "Outdoor Seating & Walkway",
+    caption: "Accessible Bathroom & Hallway",
     src: "/WhatsApp Image 2026-04-01 at 10.39.35 PM.jpg",
     height: "280px",
-    category: "Outdoors",
+    category: "Bathrooms",
   },
   {
     id: 25,
-    caption: "Home Entrance & Porch",
+    caption: "Accessible Guest Bathroom",
     src: "/WhatsApp Image 2026-04-01 at 10.39.36 PM (1).jpg",
     height: "330px",
-    category: "Exterior",
+    category: "Bathrooms",
   },
   {
     id: 26,
-    caption: "Warm Interior Accents",
+    caption: "Accessible Bathroom Detail",
     src: "/WhatsApp Image 2026-04-01 at 10.39.36 PM (2).jpg",
     height: "310px",
-    category: "Interior",
+    category: "Bathrooms",
   },
   // {
   //   id: 27,
