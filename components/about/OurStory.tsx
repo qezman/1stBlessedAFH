@@ -1,8 +1,11 @@
+import Image from "next/image";
+import { Reveal } from "../ui/Reveal";
+
 export function OurStory() {
   return (
     <section className="py-20 sm:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <div>
+        <Reveal>
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
             — Our Story
           </div>
@@ -38,16 +41,18 @@ export function OurStory() {
             Everett, Arlington, Lake Stevens, and the surrounding communities —
             offering a level of care that feels personal because it is.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="relative">
+        <Reveal className="relative" delay={0.1}>
           <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gold-50 -z-10" />
 
-          <div className="w-full aspect-[3/4] rounded-none overflow-hidden border border-gray-100 shadow-lg">
-            <img
+          <div className="relative w-full aspect-[3/4] rounded-none overflow-hidden border border-gray-100 shadow-lg">
+            <Image
               src="/Founder.jpg"
               alt="1st Blessed Adult Family Home founder"
-              className="w-full h-full object-cover object-top"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-top"
             />
           </div>
 
@@ -64,7 +69,7 @@ export function OurStory() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

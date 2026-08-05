@@ -1,4 +1,5 @@
 import { Handshake, Home, RefreshCw, Users } from "lucide-react";
+import { Reveal } from "../ui/Reveal";
 
 const VALUES = [
   {
@@ -27,7 +28,7 @@ export function OurValues() {
   return (
     <section className="py-20 sm:py-24 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end mb-16">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end mb-16">
           <div>
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
               — Our Values
@@ -41,13 +42,13 @@ export function OurValues() {
             every morning when our residents wake up and every evening before
             they go to sleep.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-gray-200 border border-gray-200 rounded-lg overflow-hidden">
           {VALUES.map((v, i) => {
             const Icon = v.icon;
             return (
-              <div key={i} className="bg-white p-10 sm:p-12">
+              <Reveal key={i} delay={(i % 2) * 0.08} className="bg-white p-10 sm:p-12">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-[#EEF5FC] rounded-none flex items-center justify-center text-[#1A3358]">
                     <Icon className="w-5 h-5 stroke-[1.75]" />
@@ -62,7 +63,7 @@ export function OurValues() {
                 <p className="text-[15px] font-light text-gray-500 leading-[1.8]">
                   {v.text}
                 </p>
-              </div>
+              </Reveal>
             );
           })}
         </div>

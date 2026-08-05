@@ -6,6 +6,7 @@ import {
   Syringe,
   Activity,
 } from "lucide-react";
+import { Reveal } from "../ui/Reveal";
 
 const SERVICES = [
   {
@@ -44,7 +45,7 @@ export function ServicesGrid() {
   return (
     <section className="py-20 sm:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <div className="mb-14 max-w-[500px]">
+        <Reveal className="mb-14 max-w-[500px]">
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#1A3358] mb-5">
             — OUR SERVICES
           </div>
@@ -57,14 +58,15 @@ export function ServicesGrid() {
             Comprehensive care without the complexity — all services are
             included.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {SERVICES.map((svc, i) => {
             const Icon = svc.icon;
             return (
-              <div
+              <Reveal
                 key={i}
+                delay={(i % 3) * 0.06}
                 className="bg-white border border-[#E9ECEF] rounded-2xl p-8 flex flex-col items-start shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <div className="w-11 h-11 bg-[#EEF5FC] rounded-xl flex items-center justify-center mb-6 text-[#1A3358]">
@@ -76,7 +78,7 @@ export function ServicesGrid() {
                 <p className="text-sm font-light text-gray-600 leading-[1.7]">
                   {svc.text}
                 </p>
-              </div>
+              </Reveal>
             );
           })}
         </div>

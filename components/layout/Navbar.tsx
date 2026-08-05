@@ -39,7 +39,7 @@ export function Navbar() {
             </div>
           </Link>
 
-          {/* Navigation Links — centered */}
+          {/* Navigation Links centered */}
           <nav className="hidden lg:flex items-center gap-7 xl:gap-10">
             {NAV_LINKS.map(({ name, path }) => {
               const active = pathname === path;
@@ -47,10 +47,11 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
+                  prefetch
                   className={`text-[14px] transition-colors hover:text-[#2B1E78] ${
                     active
-                      ? "text-[#2B1E78] font-normal"
-                      : "text-[#495057] font-light"
+                      ? "text-[#2B1E78] font-medium"
+                      : "text-[#495057] font-normal"
                   }`}
                 >
                   {name}
@@ -104,6 +105,7 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
+                  prefetch
                   className={`text-sm py-2.5 px-4 rounded-lg transition-colors ${
                     active
                       ? "bg-[#EEF5FC] text-[#2B1E78] font-normal"

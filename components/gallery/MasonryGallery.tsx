@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Image from "next/image";
 import { GALLERY_PHOTOS } from "../../data/galleryPhotos";
 import { Lightbox } from "./Lightbox";
+import { Reveal } from "../ui/Reveal";
 
 const len = GALLERY_PHOTOS.length;
 
@@ -23,7 +25,7 @@ export function MasonryGallery() {
   return (
     <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#E9ECEF] gap-2">
+        <Reveal className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#E9ECEF] gap-2">
           <span className="text-xs font-light text-[#ADB5BD] tracking-wide">
             {len} photos · 1st Blessed Adult Family Home · Everett, WA
           </span>
@@ -64,7 +66,7 @@ export function MasonryGallery() {
             </svg>
             <span>Click any photo to expand</span>
           </div>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {GALLERY_PHOTOS.map((photo, i) => (
@@ -77,11 +79,12 @@ export function MasonryGallery() {
               onKeyDown={(e) => e.key === "Enter" && open(i)}
               className="group relative block aspect-[3/4] cursor-pointer overflow-hidden"
             >
-              <img
+              <Image
                 src={photo.src}
                 alt={photo.caption}
-                className="block h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-[#0B1628]/45 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-250">
                 <svg

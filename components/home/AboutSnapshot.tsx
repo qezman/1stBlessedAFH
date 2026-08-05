@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 import { SectionHeader } from "../ui/SectionHeader";
+import { Reveal } from "../ui/Reveal";
 
 const HIGHLIGHTS = [
   "Fully licensed & regulated by Washington State DSHS",
@@ -16,12 +18,14 @@ export function AboutSnapshot() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-              <img
+          <Reveal className="lg:col-span-6 relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-[450px]">
+              <Image
                 src="/WhatsApp Image 2026-04-01 at 10.39.09 PM.jpg"
                 alt="Caregivers and family environment at 1st Blessed"
-                className="w-full h-[450px] object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-navy-950/10" />
             </div>
@@ -34,9 +38,9 @@ export function AboutSnapshot() {
                 attention every hour of the day.
               </p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-6 space-y-6">
+          <Reveal className="lg:col-span-6 space-y-6" delay={0.1}>
             <SectionHeader
               badge="WHO WE ARE"
               title="A Loving Home Built Around Dignity, Safety & Family"
@@ -65,7 +69,7 @@ export function AboutSnapshot() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Button } from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const DIFFERENTIATORS = [
   {
@@ -27,7 +28,7 @@ export function WhyUsSection() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        <div>
+        <Reveal>
           <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-5">
             <span className="w-5 h-[1px] bg-navy-500" />
             Why 1st Blessed
@@ -42,9 +43,9 @@ export function WhyUsSection() {
           <Button to="/contact" variant="gold" size="lg">
             Talk to us today →
           </Button>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-col border-l border-gray-200">
+        <Reveal delay={0.1} className="flex flex-col border-l border-gray-200">
           {DIFFERENTIATORS.map((d, i) => (
             <div
               key={i}
@@ -63,7 +64,7 @@ export function WhyUsSection() {
               </div>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

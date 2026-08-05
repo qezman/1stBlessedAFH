@@ -1,44 +1,46 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { Reveal } from "../ui/Reveal";
 
 const META_ITEMS = [
-  { val: "12", label: "Residents" },
-  { val: "24/7", label: "On-site care" },
-  { val: "100%", label: "Family satisfaction" },
+  { val: "12", label: "Residents Max" },
+  { val: "24/7", label: "On-site Care" },
+  { val: "100%", label: "Family Satisfaction" },
 ];
 
 export function HeroSection() {
   return (
     <section className="bg-[#FAFAFC] pt-[72px]">
-      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-14 sm:py-16 lg:min-h-[calc(100vh-72px)] lg:py-20">
+      <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:max-w-[1136px] lg:px-0">
+        <div className="grid grid-cols-1 items-center gap-10 py-14 sm:py-16 lg:grid-cols-[1fr_550px] lg:items-start lg:gap-[42px] lg:py-[66px]">
           {/* Left column */}
-          <div className="flex flex-col">
+          <Reveal className="flex flex-col">
             {/* Label */}
-            <div className="flex items-center gap-2.5 text-[11px] font-medium tracking-[0.08em] uppercase text-[#0B1628] mb-10">
+            <div className="mb-7 flex items-center gap-2.5 text-[11px] font-medium tracking-[0.08em] uppercase text-[#0B1628]">
               <span className="w-5 h-px bg-[#0B1628]" />
               Everett, Washington · Licensed Adult Family Home
             </div>
 
             {/* Heading */}
-            <h1 className="font-sans text-[42px] sm:text-[52px] lg:text-[64px] font-light leading-[1.15] tracking-[-0.03em] text-[#0B1628] mb-8">
+            <h1 className="mb-7 font-sans text-[42px] font-light leading-[1.1] tracking-[-0.03em] text-[#0B1628] sm:text-[52px] lg:text-[54px] lg:leading-[1.04]">
               Senior care that
               <br />
               feels like home.
             </h1>
 
             {/* Description */}
-            <p className="text-[16px] font-light leading-[1.8] text-[#495057] mb-12 max-w-[460px]">
+            <p className="mb-8 max-w-[460px] text-[16px] font-light leading-[1.65] text-[#495057]">
               A private, twelve-resident home in Everett providing 24-hour
               personalized care. Not a facility — a family. Where dignity,
               comfort, and compassion come first.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4 mb-12 sm:mb-16">
+            <div className="mb-12 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2.5 bg-[#2B1E78] hover:bg-[#221766] text-white text-[15px] font-medium px-6 py-3.5 rounded-lg transition-colors"
+                className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#2B1E78] px-5 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-[#221766]"
               >
                 <span>Schedule a tour</span>
                 <ArrowRight className="w-[18px] h-[18px]" />
@@ -64,16 +66,22 @@ export function HeroSection() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
 
-          {/* Right column — image */}
-          <div className="overflow-hidden rounded-xl">
-            <img
+          {/* Right column image */}
+          <Reveal
+            className="relative aspect-[4/5] overflow-hidden rounded-md lg:h-[480px] lg:aspect-auto"
+            delay={0.15}
+          >
+            <Image
               src="/hero-img.jpg"
               alt="Caregivers and a resident at 1st Blessed Adult Family Home"
-              className="w-full h-auto object-cover aspect-[4/5] lg:aspect-auto lg:max-h-[680px]"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

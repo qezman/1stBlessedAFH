@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import { GalleryPhoto } from "../../data/galleryPhotos";
 
 interface LightboxProps {
@@ -99,10 +100,13 @@ export function Lightbox({
         className="relative flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
+        <Image
           src={photo.src}
           alt={photo.caption}
+          fill
+          sizes="52vw"
           className="max-w-[52vw] max-h-[72vh] shadow-2xl object-contain animate-in zoom-in-95 duration-200"
+          style={{ position: "static", width: "auto", height: "auto" }}
         />
       </div>
 

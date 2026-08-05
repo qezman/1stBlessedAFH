@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { Button } from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 const LIFESTYLE_POINTS = [
   "Peaceful neighborhood setting in Everett",
@@ -11,12 +13,14 @@ export function LifestyleSection() {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-        <div className="relative">
-          <div className="w-full aspect-[4/5] rounded-none overflow-hidden border border-gray-100 shadow-lg">
-            <img
+<Reveal className="relative">
+          <div className="relative w-full aspect-[4/5] rounded-none overflow-hidden border border-gray-100 shadow-lg">
+            <Image
               src="https://framerusercontent.com/assets/xkjm8YFt86QMxl6KrvoqMGtrSI0.jpg"
               alt="Home interior at 1st Blessed AFH"
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
           </div>
           <div className="absolute -bottom-8 -right-4 sm:-right-8 w-44 sm:w-52 aspect-square bg-gold-50 border-4 border-white rounded-none p-4 flex flex-col justify-center shadow-lg">
@@ -27,9 +31,9 @@ export function LifestyleSection() {
               Designed for daily dignity and warmth.
             </span>
           </div>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={0.1}>
           <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-5">
             <span className="w-5 h-[1px] bg-navy-500" />
             Life at 1st Blessed
@@ -68,7 +72,7 @@ export function LifestyleSection() {
           <Button to="/gallery" variant="outline" size="lg">
             Take a virtual tour →
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
