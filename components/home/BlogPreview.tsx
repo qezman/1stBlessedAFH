@@ -9,7 +9,7 @@ export const BlogPreview: React.FC = () => {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 sm:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="FAMILY GUIDES & BLOG"

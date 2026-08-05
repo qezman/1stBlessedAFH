@@ -37,7 +37,7 @@ function PostCard({ post }: { post: Post }) {
 
 export function PostGrid({ posts }: { posts: Post[] }) {
   return (
-    <section className="px-6 sm:px-12 pt-16 pb-24 bg-white">
+    <section className="px-6 py-20 sm:px-12 sm:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-gray-100">
           <h2 className="font-sans text-xl font-normal text-[#0B1628] tracking-[-0.01em]">

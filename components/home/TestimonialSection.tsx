@@ -5,7 +5,7 @@ import { TestimonialCard } from "../ui/TestimonialCard";
 
 export const TestimonialSection: React.FC = () => {
   return (
-    <section className="py-20 bg-gold-50/50 border-y border-gold-500/10">
+    <section className="py-20 sm:py-24 bg-gold-50/50 border-y border-gold-500/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="FAMILY TESTIMONIALS"

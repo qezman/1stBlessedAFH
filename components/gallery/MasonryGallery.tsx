@@ -23,7 +23,7 @@ export function MasonryGallery() {
   );
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
+    <section className="py-20 sm:py-24 px-6 sm:px-12 bg-white">
       <div className="max-w-[1400px] mx-auto">
         <Reveal className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-[#E9ECEF] gap-2">
           <span className="text-xs font-light text-[#ADB5BD] tracking-wide">

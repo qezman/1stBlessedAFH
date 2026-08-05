@@ -2,7 +2,7 @@ import React from "react";
 
 export const GalleryCTA: React.FC = () => {
   return (
-    <section className="px-6 md:px-12 pb-24 bg-gray-50">
+    <section className="px-6 py-12 sm:px-12 sm:py-20 bg-gray-50">
       <div className="max-w-[1200px] mx-auto bg-[#0A1220] rounded-2xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-xl">
         {/* Left info */}
         <div className="lg:col-span-8 space-y-4">

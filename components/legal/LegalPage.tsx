@@ -50,7 +50,7 @@ export function LegalPage({
       </section>
 
       {/* ── BODY ── */}
-      <section className="py-20 px-6 sm:px-12 bg-white">
+      <section className="px-6 py-20 sm:px-12 sm:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-12 lg:gap-20 items-start">
           {/* Sticky TOC sidebar */}
           <div className="lg:sticky lg:top-[100px]">

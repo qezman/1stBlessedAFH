@@ -14,7 +14,7 @@ export function GalleryPreview() {
   const [featured, ...rest] = photos;
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-20 sm:py-24 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
         <Reveal className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
           <div>

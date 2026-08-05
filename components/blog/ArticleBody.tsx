@@ -36,7 +36,7 @@ export function ArticleBody({ post }: { post: FullPost }) {
   const headings = post.body.filter((b) => b.type === "h2");
 
   return (
-    <section className="px-6 sm:px-12 py-16 bg-white">
+    <section className="px-6 py-20 sm:px-12 sm:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16 lg:gap-20 items-start">
         {/* Article body */}
         <div>

@@ -4,8 +4,8 @@ import { CategoryPill } from "./FeaturedPost";
 
 export function RelatedPosts({ posts }: { posts: Post[] }) {
   return (
-    <section className="px-6 sm:px-12 pb-20 bg-white border-t border-gray-100">
-      <div className="max-w-[1200px] mx-auto pt-16">
+    <section className="px-6 py-20 sm:px-12 sm:py-24 bg-white border-t border-gray-100">
+      <div className="max-w-[1200px] mx-auto">
         <div className="mb-10">
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-4">
             — Keep reading

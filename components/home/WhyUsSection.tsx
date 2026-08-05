@@ -26,7 +26,7 @@ const DIFFERENTIATORS = [
 
 export function WhyUsSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 sm:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         <Reveal>
           <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-5">
