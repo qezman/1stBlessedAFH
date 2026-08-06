@@ -24,12 +24,12 @@ export default async function BlogPage() {
       query: postsQuery,
     })) as { data: SanityPost[] };
     docs = data ?? [];
-  } catch {
-    // Sanity unreachable — show the empty state below.
-  }
+  } catch {}
   const featuredDoc = docs.find((d) => d.featured) ?? docs[0];
   const posts = docs.map(toPost);
-  const featured = featuredDoc ? posts.find((p) => p.id === featuredDoc._id) : undefined;
+  const featured = featuredDoc
+    ? posts.find((p) => p.id === featuredDoc._id)
+    : undefined;
   const rest = featured ? posts.filter((p) => p.id !== featured.id) : posts;
 
   return (

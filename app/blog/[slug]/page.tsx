@@ -3,7 +3,11 @@ import { ArticleBody } from "@/components/blog/ArticleBody";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { BlogCTA } from "@/components/blog/BlogCTA";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
-import { postBySlugQuery, postsQuery, type SanityPost } from "@/sanity/lib/queries";
+import {
+  postBySlugQuery,
+  postsQuery,
+  type SanityPost,
+} from "@/sanity/lib/queries";
 import { toFullPost, toPost } from "@/sanity/lib/posts";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -23,9 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       params: { slug: params.slug },
     })) as { data: SanityPost };
     data = res.data;
-  } catch {
-    // Sanity unreachable — no metadata.
-  }
+  } catch {}
 
   if (!data?.slug) {
     return {};
@@ -50,9 +52,7 @@ export default async function BlogPostPage({ params }: Props) {
     ])) as [{ data: SanityPost }, { data: SanityPost[] }];
     post = postRes;
     all = allRes ?? [];
-  } catch {
-    // Sanity unreachable — fall through to notFound().
-  }
+  } catch {}
 
   if (!post?.slug) {
     notFound();
