@@ -19,4 +19,4 @@ out/
 *.log
 node_modules
 
-./schemaTypes/.env.ts
+.env.ts
