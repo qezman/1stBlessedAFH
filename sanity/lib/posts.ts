@@ -24,7 +24,7 @@ export function formatDate(iso?: string): string {
 
 export function coverUrl(
   post: Pick<SanityPost, "coverImage">,
-  width = 1200,
+  width = 1920,
 ): string | undefined {
   if (!post.coverImage?.asset) return undefined;
   return urlFor(post.coverImage).width(width).url();

@@ -49,13 +49,20 @@ export function ArticleHero({ post }: { post: FullPost }) {
         </div>
 
         {/* Cover image */}
-        <PostCover
-          post={post}
-          className="w-full rounded-lg overflow-hidden"
-          style={{ aspectRatio: "16/7" }}
-          priority
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
+        <div className="max-w-[960px] mx-auto">
+          <PostCover
+            post={post}
+            className="w-full rounded-xl sm:rounded-2xl overflow-hidden ring-1 ring-black/5"
+            style={{ aspectRatio: "16/9" }}
+            priority
+            sizes="(max-width: 768px) 100vw, 960px"
+          />
+          {post.coverUrl && post.coverAlt && (
+            <p className="mt-3 text-center text-xs font-light text-gray-400">
+              {post.coverAlt}
+            </p>
+          )}
+        </div>
 
         {/* Share row */}
         <div className="flex flex-col items-start gap-3 py-5 border-t border-b border-gray-100 mt-8 sm:flex-row sm:items-center sm:justify-between">
