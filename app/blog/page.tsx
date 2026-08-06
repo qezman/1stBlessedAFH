@@ -18,10 +18,15 @@ export const metadata: Metadata = createPageMetadata({
 export const revalidate = 60;
 
 export default async function BlogPage() {
-  const { data } = (await sanityFetch({
-    query: postsQuery,
-  })) as { data: SanityPost[] };
-  const docs = data ?? [];
+  let docs: SanityPost[] = [];
+  try {
+    const { data } = (await sanityFetch({
+      query: postsQuery,
+    })) as { data: SanityPost[] };
+    docs = data ?? [];
+  } catch {
+    // Sanity unreachable — show the empty state below.
+  }
   const featuredDoc = docs.find((d) => d.featured) ?? docs[0];
   const posts = docs.map(toPost);
   const featured = featuredDoc ? posts.find((p) => p.id === featuredDoc._id) : undefined;

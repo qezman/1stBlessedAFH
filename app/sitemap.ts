@@ -15,9 +15,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/terms-of-use",
   ];
 
-  const posts = await client.fetch<{ slug: string; publishedAt?: string | null; _createdAt?: string }[]>(
-    postSlugsQuery,
-  );
+  let posts: { slug: string; publishedAt?: string | null; _createdAt?: string }[] = [];
+  try {
+    posts = await client.fetch<
+      { slug: string; publishedAt?: string | null; _createdAt?: string }[]
+    >(postSlugsQuery);
+  } catch {
+    // Sanity unreachable during build — emit static routes only.
+  }
 
   return [
     ...pages.map((path) => ({

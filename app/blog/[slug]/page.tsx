@@ -16,10 +16,16 @@ interface Props {
 export const revalidate = 60;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { data } = (await sanityFetch({
-    query: postBySlugQuery,
-    params: { slug: params.slug },
-  })) as { data: SanityPost };
+  let data: SanityPost | undefined;
+  try {
+    const res = (await sanityFetch({
+      query: postBySlugQuery,
+      params: { slug: params.slug },
+    })) as { data: SanityPost };
+    data = res.data;
+  } catch {
+    // Sanity unreachable — no metadata.
+  }
 
   if (!data?.slug) {
     return {};
@@ -32,21 +38,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const [{ data: post }, { data: all }] = (await Promise.all([
-    sanityFetch({
-      query: postBySlugQuery,
-      params: { slug: params.slug },
-    }),
-    sanityFetch({ query: postsQuery }),
-  ])) as [{ data: SanityPost }, { data: SanityPost[] }];
+  let post: SanityPost | undefined;
+  let all: SanityPost[] = [];
+  try {
+    const [{ data: postRes }, { data: allRes }] = (await Promise.all([
+      sanityFetch({
+        query: postBySlugQuery,
+        params: { slug: params.slug },
+      }),
+      sanityFetch({ query: postsQuery }),
+    ])) as [{ data: SanityPost }, { data: SanityPost[] }];
+    post = postRes;
+    all = allRes ?? [];
+  } catch {
+    // Sanity unreachable — fall through to notFound().
+  }
 
   if (!post?.slug) {
     notFound();
   }
 
   const full = toFullPost(post);
-  const related = (all ?? [])
-    .filter((p) => p._id !== post._id)
+  const related = all
+    .filter((p) => p._id !== post?._id)
     .slice(0, 3)
     .map(toPost);
 
