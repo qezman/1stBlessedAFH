@@ -10,7 +10,7 @@ export function OurStory() {
             — Our Story
           </div>
 
-          <h2 className="font-sans text-3xl sm:text-4xl font-light text-[#0B1628] tracking-[-0.02em] leading-[1.25] mb-7">
+          <h2 className="font-sans text-3xl sm:text-4xl font-light text-[#0B1628] tracking-[-0.02em] leading-[1.3] mb-7">
             We started small — and that was always the plan.
           </h2>
 

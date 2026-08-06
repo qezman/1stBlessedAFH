@@ -39,7 +39,7 @@ export function LifestyleSection() {
             Life at 1st Blessed
           </div>
 
-          <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-tight mb-6">
+          <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-[1.3] mb-6">
             A home designed for comfort, not efficiency.
           </h2>
 

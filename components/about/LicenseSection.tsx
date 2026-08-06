@@ -24,7 +24,7 @@ export function LicenseSection() {
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
             — Licensing & Compliance
           </div>
-          <h2 className="font-sans text-3xl sm:text-4xl font-light text-[#0B1628] tracking-[-0.02em] leading-tight mb-6">
+          <h2 className="font-sans text-3xl sm:text-4xl font-light text-[#0B1628] tracking-[-0.02em] leading-[1.3] mb-6">
             Fully licensed, regularly inspected, always accountable.
           </h2>
           <p className="text-base font-light text-gray-600 leading-[1.85] mb-10">

@@ -11,7 +11,7 @@ export function ContactSection() {
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
               — Send a message
             </div>
-            <h2 className="font-sans text-2xl sm:text-3xl font-light text-[#0B1628] tracking-[-0.02em] leading-tight mb-3">
+            <h2 className="font-sans text-2xl sm:text-3xl font-light text-[#0B1628] tracking-[-0.02em] leading-[1.3] mb-3">
               Fill in the form and we'll
               <br />
               get back to you shortly.
@@ -30,7 +30,7 @@ export function ContactSection() {
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
               — Contact details
             </div>
-            <h2 className="font-sans text-2xl sm:text-3xl font-light text-[#0B1628] tracking-[-0.02em] leading-tight">
+            <h2 className="font-sans text-2xl sm:text-3xl font-light text-[#0B1628] tracking-[-0.02em] leading-[1.3]">
               Other ways to
               <br />
               reach us.

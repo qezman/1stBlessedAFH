@@ -22,7 +22,7 @@ export function GalleryPreview() {
               <span className="w-5 h-[1px] bg-navy-500" />
               Gallery
             </div>
-            <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-tight">
+            <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-[1.3]">
               Take a look inside our home.
             </h2>
           </div>

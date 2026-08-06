@@ -33,7 +33,7 @@ export function WhyUsSection() {
             <span className="w-5 h-[1px] bg-navy-500" />
             Why 1st Blessed
           </div>
-          <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-tight mb-6">
+          <h2 className="font-sans text-3xl sm:text-4xl font-light text-navy-950 tracking-[-0.02em] leading-[1.3] mb-6">
             What makes us different from every other option.
           </h2>
           <p className="text-base font-light text-gray-600 leading-[1.8] mb-8">

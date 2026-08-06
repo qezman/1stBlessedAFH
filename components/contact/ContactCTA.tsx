@@ -9,7 +9,7 @@ export function ContactCTA() {
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#DDB04A] mb-5">
               — NOTHING BEATS A VISIT
             </div>
-            <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light leading-[1.25] text-white tracking-[-0.025em] mb-6">
+            <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light leading-[1.3] text-white tracking-[-0.025em] mb-6">
               Come walk through
               <br />
               the home yourself.

@@ -22,7 +22,7 @@ export const GalleryHero: React.FC = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight leading-[1.05] mb-6 max-w-[600px]">
+        <h1 className="font-sans text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight leading-[1.2] mb-6 max-w-[600px]">
           A look inside
           <br />
           <span className="text-[#C9992E] font-normal">our home.</span>

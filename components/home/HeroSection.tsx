@@ -23,7 +23,7 @@ export function HeroSection() {
             </div>
 
             {/* Heading */}
-            <h1 className="mb-7 font-sans text-[42px] font-light leading-[1.1] tracking-[-0.03em] text-[#0B1628] sm:text-[52px] lg:text-[54px] lg:leading-[1.04]">
+            <h1 className="mb-7 font-sans text-[42px] font-light leading-[1.2] tracking-[-0.03em] text-[#0B1628] sm:text-[52px] lg:text-[54px]">
               Senior care that
               <br />
               feels like home.

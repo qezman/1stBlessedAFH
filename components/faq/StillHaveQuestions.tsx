@@ -36,7 +36,7 @@ export function StillHaveQuestions() {
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
               — Get in touch
             </div>
-            <h2 className="font-sans text-3xl sm:text-4xl font-light text-[#0B1628] tracking-[-0.02em] leading-tight">
+            <h2 className="font-sans text-3xl sm:text-4xl font-light text-[#0B1628] tracking-[-0.02em] leading-[1.3]">
               Still have questions?
             </h2>
           </div>

@@ -49,7 +49,7 @@ export function ServicesGrid() {
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#1A3358] mb-5">
             — OUR SERVICES
           </div>
-          <h2 className="font-sans text-3xl sm:text-4xl lg:text-[42px] font-light text-[#0B1628] tracking-[-0.025em] leading-[1.15] mb-5">
+          <h2 className="font-sans text-3xl sm:text-4xl lg:text-[42px] font-light text-[#0B1628] tracking-[-0.025em] leading-[1.3] mb-5">
             Everything your loved one
             <br />
             needs, under one roof.

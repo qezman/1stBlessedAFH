@@ -11,7 +11,7 @@ export const GalleryCTA: React.FC = () => {
             <span>SEE IT IN PERSON</span>
           </div>
 
-          <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light text-white tracking-[-0.025em] leading-[1.25]">
+          <h2 className="font-sans text-3xl sm:text-4xl lg:text-[46px] font-light text-white tracking-[-0.025em] leading-[1.3]">
             Photos don't do it justice.
             <br />
             Come visit.
