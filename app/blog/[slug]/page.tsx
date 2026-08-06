@@ -2,7 +2,9 @@ import { ArticleHero } from "@/components/blog/ArticleHero";
 import { ArticleBody } from "@/components/blog/ArticleBody";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { BlogCTA } from "@/components/blog/BlogCTA";
-import { FULL_POSTS, RELATED_POSTS } from "@/components/blog/blogData";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { postBySlugQuery, postsQuery, type SanityPost } from "@/sanity/lib/queries";
+import { toFullPost, toPost } from "@/sanity/lib/posts";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
@@ -11,42 +13,54 @@ interface Props {
   params: { slug: string };
 }
 
-export function generateStaticParams() {
-  return FULL_POSTS.map((post) => ({
-    slug: post.slug,
-  }));
-}
+export const revalidate = 60;
 
-export function generateMetadata({ params }: Props): Metadata {
-  const post = FULL_POSTS.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { data } = (await sanityFetch({
+    query: postBySlugQuery,
+    params: { slug: params.slug },
+  })) as { data: SanityPost };
 
-  if (!post) {
+  if (!data?.slug) {
     return {};
   }
   return createPageMetadata({
-    title: post.title,
-    description: post.excerpt,
-    path: `/blog/${post.slug}`,
+    title: data.title || "Blog article",
+    description: data.excerpt || "",
+    path: `/blog/${data.slug}`,
   });
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = FULL_POSTS.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const [{ data: post }, { data: all }] = (await Promise.all([
+    sanityFetch({
+      query: postBySlugQuery,
+      params: { slug: params.slug },
+    }),
+    sanityFetch({ query: postsQuery }),
+  ])) as [{ data: SanityPost }, { data: SanityPost[] }];
 
-  if (!post) {
+  if (!post?.slug) {
     notFound();
   }
 
+  const full = toFullPost(post);
+  const related = (all ?? [])
+    .filter((p) => p._id !== post._id)
+    .slice(0, 3)
+    .map(toPost);
+
   return (
     <main>
-      <ArticleHero post={post} />
-      <ArticleBody post={post} />
-      <RelatedPosts posts={RELATED_POSTS} />
+      <ArticleHero post={full} />
+      <ArticleBody post={full} />
+      {related.length > 0 && <RelatedPosts posts={related} />}
       <BlogCTA
         label="Take the next step"
         heading={"Have more questions?\nWe're happy to talk."}
         sub="No phone trees, no intake forms. Just a real conversation about what's right for your family."
       />
+      <SanityLive />
     </main>
   );
 }

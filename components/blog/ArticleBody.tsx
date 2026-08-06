@@ -1,46 +1,16 @@
 import Link from "next/link";
-import type { FullPost, BodyBlock } from "./blogData";
-
-function renderBlock(block: BodyBlock, i: number) {
-  if (block.type === "h2")
-    return (
-      <h2
-        key={i}
-        className="font-sans text-2xl font-medium text-[#0B1628] tracking-[-0.015em] leading-tight mt-11 mb-5"
-      >
-        {block.text}
-      </h2>
-    );
-
-  if (block.type === "callout")
-    return (
-      <blockquote
-        key={i}
-        className="border-l-[3px] border-[#C9992E] bg-[#FDF8EE] rounded-r px-6 py-5 my-9 text-lg font-light text-[#0B1628] leading-[1.65] italic"
-      >
-        {block.text}
-      </blockquote>
-    );
-
-  return (
-    <p
-      key={i}
-      className="text-[17px] font-light text-gray-700 leading-[1.85] mb-6"
-    >
-      {block.text}
-    </p>
-  );
-}
+import type { FullPost } from "./blogData";
+import { PortableTextBody, getHeadings } from "./PortableText";
 
 export function ArticleBody({ post }: { post: FullPost }) {
-  const headings = post.body.filter((b) => b.type === "h2");
+  const headings = getHeadings(post.body);
 
   return (
     <section className="px-6 py-20 sm:px-12 sm:py-24 bg-white">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16 lg:gap-20 items-start">
         {/* Article body */}
         <div>
-          {post.body.map((block, i) => renderBlock(block, i))}
+          <PortableTextBody blocks={post.body} />
 
           <div className="mt-14 pt-10 border-t border-gray-100">
             <Link
@@ -70,10 +40,10 @@ export function ArticleBody({ post }: { post: FullPost }) {
                 In this article
               </div>
               <ul className="flex flex-col gap-2.5">
-                {headings.map((h, i) => (
-                  <li key={i}>
+                {headings.map((h) => (
+                  <li key={h.index}>
                     <a
-                      href={`#section-${i}`}
+                      href={`#section-${h.index}`}
                       className="text-[13px] font-light text-gray-500 leading-relaxed pl-3 border-l-2 border-gray-200 hover:border-[#1A3358] hover:text-[#1A3358] transition-colors block"
                     >
                       {h.text}
@@ -93,7 +63,7 @@ export function ArticleBody({ post }: { post: FullPost }) {
               👤
             </div>
             <div className="text-sm font-medium text-[#0B1628] mb-0.5">
-              [Author Name]
+              {post.author || "[Author Name]"}
             </div>
             <div className="text-xs font-light text-gray-500">
               1st Blessed Care Team

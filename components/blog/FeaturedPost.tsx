@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Post } from "./blogData";
 
@@ -26,6 +27,50 @@ export function PostMeta({
   );
 }
 
+export function PostCover({
+  post,
+  className,
+  style,
+  priority,
+  sizes,
+  children,
+}: {
+  post: Post;
+  className?: string;
+  style?: React.CSSProperties;
+  priority?: boolean;
+  sizes?: string;
+  children?: React.ReactNode;
+}) {
+  if (post.coverUrl) {
+    return (
+      <div className={`relative ${className ?? ""}`} style={style}>
+        <Image
+          src={post.coverUrl}
+          alt={post.coverAlt || post.title}
+          fill
+          priority={priority}
+          sizes={sizes || "(max-width: 768px) 100vw, 50vw"}
+          className="object-cover"
+        />
+        {children}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className={`relative flex items-center justify-center ${className ?? ""}`}
+      style={{ ...style, background: post.coverBg }}
+    >
+      <span className="text-[11px] tracking-widest uppercase text-white/30">
+        Cover Image
+      </span>
+      {children}
+    </div>
+  );
+}
+
 export function FeaturedPost({ post }: { post: Post }) {
   return (
     <section className="pt-20 sm:pt-24 pb-0 bg-white px-6 sm:px-12">
@@ -40,17 +85,16 @@ export function FeaturedPost({ post }: { post: Post }) {
           className="grid grid-cols-1 lg:grid-cols-2 border border-gray-200 rounded-lg overflow-hidden hover:border-[#A8C3E0] transition-colors group"
         >
           {/* Cover */}
-          <div
-            className="min-h-[320px] lg:min-h-[480px] relative flex items-center justify-center"
-            style={{ background: post.coverBg }}
+          <PostCover
+            post={post}
+            className="min-h-[320px] lg:min-h-[480px]"
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
           >
-            <span className="text-[11px] tracking-widest uppercase text-white/30">
-              Cover Image
-            </span>
             <div className="absolute top-5 left-5 bg-[#C9992E] text-white text-[10px] font-semibold tracking-[0.1em] uppercase px-3 py-1.5 rounded-sm">
               Featured
             </div>
-          </div>
+          </PostCover>
 
           {/* Content */}
           <div className="p-10 sm:p-14 flex flex-col justify-center bg-white">

@@ -1,20 +1,17 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { Post } from "./blogData";
-import { CategoryPill, PostMeta } from "./FeaturedPost";
+import { CategoryPill, PostMeta, PostCover } from "./FeaturedPost";
 
 function PostCard({ post }: { post: Post }) {
   return (
     <Link href={`/blog/${post.slug}`} className="flex flex-col group">
       <div className="overflow-hidden rounded mb-5">
-        <div
-          className="w-full h-[220px] flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:scale-[1.02]"
-          style={{ background: post.coverBg }}
-        >
-          <span className="text-[11px] tracking-widest uppercase text-white/30">
-            Cover Image
-          </span>
-        </div>
+        <PostCover
+          post={post}
+          className="w-full h-[220px] transition-transform duration-300 ease-in-out group-hover:scale-[1.02]"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
       </div>
 
       <CategoryPill label={post.category} />

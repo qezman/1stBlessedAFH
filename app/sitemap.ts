@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
-import { FULL_POSTS } from "@/components/blog/blogData";
+import { client } from "@/sanity/lib/client";
+import { postSlugsQuery } from "@/sanity/lib/queries";
 import { SITE_URL } from "@/lib/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = [
     "",
     "/about",
@@ -14,6 +15,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms-of-use",
   ];
 
+  const posts = await client.fetch<{ slug: string; publishedAt?: string | null; _createdAt?: string }[]>(
+    postSlugsQuery,
+  );
+
   return [
     ...pages.map((path) => ({
       url: new URL(path, SITE_URL).toString(),
@@ -22,9 +27,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         path === "" ? ("weekly" as const) : ("monthly" as const),
       priority: path === "" ? 1 : 0.7,
     })),
-    ...FULL_POSTS.map((post) => ({
+    ...posts.map((post) => ({
       url: new URL(`/blog/${post.slug}`, SITE_URL).toString(),
-      lastModified: new Date(post.date),
+      lastModified: post.publishedAt
+        ? new Date(post.publishedAt)
+        : post._createdAt
+          ? new Date(post._createdAt)
+          : new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),

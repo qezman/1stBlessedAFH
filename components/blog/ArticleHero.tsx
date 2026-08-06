@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { FullPost } from "./blogData";
-import { CategoryPill } from "./FeaturedPost";
+import { CategoryPill, PostCover } from "./FeaturedPost";
 
 export function ArticleHero({ post }: { post: FullPost }) {
   const shareUrl = `https://1stblessedafh.com/blog/${post.slug}`;
@@ -40,7 +40,7 @@ export function ArticleHero({ post }: { post: FullPost }) {
             <span className="w-1 h-1 rounded-full bg-gray-300" />
             <span>1st Blessed Team</span>
           </div>
-          <h1 className="font-sans text-3xl sm:text-4xl lg:text-[52px] font-light text-[#0B1628] tracking-[-0.025em] leading-[1.25] mb-6">
+          <h1 className="font-sans text-3xl sm:text-4xl lg:text-[52px] font-light text-[#0B1628] tracking-[-0.025em] leading-[1.3] mb-6">
             {post.title}
           </h1>
           <p className="text-lg font-light text-gray-500 leading-[1.75]">
@@ -49,14 +49,13 @@ export function ArticleHero({ post }: { post: FullPost }) {
         </div>
 
         {/* Cover image */}
-        <div
-          className="w-full rounded-lg overflow-hidden flex items-center justify-center mb-0"
-          style={{ background: post.coverBg, aspectRatio: "16/7" }}
-        >
-          <span className="text-[11px] tracking-widest uppercase text-white/30">
-            Article Cover Image
-          </span>
-        </div>
+        <PostCover
+          post={post}
+          className="w-full rounded-lg overflow-hidden"
+          style={{ aspectRatio: "16/7" }}
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
 
         {/* Share row */}
         <div className="flex flex-col items-start gap-3 py-5 border-t border-b border-gray-100 mt-8 sm:flex-row sm:items-center sm:justify-between">

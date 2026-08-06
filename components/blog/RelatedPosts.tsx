@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Post } from "./blogData";
-import { CategoryPill } from "./FeaturedPost";
+import { CategoryPill, PostCover } from "./FeaturedPost";
 
 export function RelatedPosts({ posts }: { posts: Post[] }) {
   return (
@@ -23,14 +23,11 @@ export function RelatedPosts({ posts }: { posts: Post[] }) {
               className="flex flex-col group"
             >
               <div className="overflow-hidden rounded mb-4">
-                <div
-                  className="w-full h-[180px] flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]"
-                  style={{ background: post.coverBg }}
-                >
-                  <span className="text-[11px] tracking-widest uppercase text-white/30">
-                    Cover Image
-                  </span>
-                </div>
+                <PostCover
+                  post={post}
+                  className="w-full h-[180px] transition-transform duration-300 group-hover:scale-[1.02]"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <CategoryPill label={post.category} />
               <h3 className="font-sans text-base font-normal text-[#0B1628] tracking-[-0.01em] leading-[1.4] mb-2 group-hover:text-[#1A3358] transition-colors">
