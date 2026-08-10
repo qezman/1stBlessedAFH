@@ -14,7 +14,7 @@ export function GalleryPreview() {
   const [featured, ...rest] = photos;
 
   return (
-    <section className="py-20 sm:py-24 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
         <Reveal className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
           <div>
@@ -43,7 +43,7 @@ export function GalleryPreview() {
                 fill
                 priority
                 sizes="(max-width: 640px) 100vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105 !rounded-none"
               />
               <div className="absolute inset-0 bg-navy-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                 <span className="text-xs text-white font-light tracking-wide">
@@ -66,7 +66,7 @@ export function GalleryPreview() {
                     alt={photo.caption}
                     fill
                     sizes="(max-width: 640px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105 !rounded-none"
                   />
                   <div className="absolute inset-0 bg-navy-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                     <span className="text-xs text-white font-light tracking-wide">

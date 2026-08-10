@@ -103,10 +103,11 @@ export function Lightbox({
         <Image
           src={photo.src}
           alt={photo.caption}
-          fill
+          width={1200}
+          height={800}
           sizes="52vw"
           className="max-w-[52vw] max-h-[72vh] shadow-2xl object-contain animate-in zoom-in-95 duration-200"
-          style={{ position: "static", width: "auto", height: "auto" }}
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
 
