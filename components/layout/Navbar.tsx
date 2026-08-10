@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Menu, X, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   { name: "Home", path: "/" },
@@ -40,7 +41,7 @@ export function Navbar() {
           </Link>
 
           {/* Navigation Links centered */}
-          <nav className="hidden lg:flex items-center gap-7 xl:gap-10">
+          <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
             {NAV_LINKS.map(({ name, path }) => {
               const active = pathname === path;
               return (
@@ -48,13 +49,20 @@ export function Navbar() {
                   key={path}
                   href={path}
                   prefetch
-                  className={`text-[14px] transition-colors hover:text-[#2B1E78] ${
+                  className={`relative text-[14px] transition-colors hover:text-[#2B1E78] ${
                     active
                       ? "text-[#2B1E78] font-medium"
                       : "text-[#495057] font-normal"
                   }`}
                 >
                   {name}
+                  {active && (
+                    <motion.div
+                      layoutId="nav-underline"
+                      className="absolute left-0 right-0 -bottom-1 h-[2px] bg-[#2B1E78] rounded-full"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
                 </Link>
               );
             })}
