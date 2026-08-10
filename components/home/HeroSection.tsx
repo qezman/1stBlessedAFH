@@ -11,9 +11,9 @@ const META_ITEMS = [
 
 export function HeroSection() {
   return (
-    <section className="bg-[#FAFAFC] pt-[72px]">
+    <section className="bg-[#FAFAFC] pt-[72px] relative overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10 lg:max-w-[1136px] lg:px-0">
-        <div className="grid grid-cols-1 items-center gap-10 py-14 sm:py-16 lg:grid-cols-[1fr_550px] lg:items-start lg:gap-[42px] lg:py-[66px]">
+        <div className="grid grid-cols-1 items-center gap-10 py-16 md:py-24 lg:py-32 lg:grid-cols-[1fr_550px] lg:items-start lg:gap-[42px] lg:py-[66px]">
           {/* Left column */}
           <Reveal className="flex flex-col">
             {/* Label */}
@@ -23,7 +23,7 @@ export function HeroSection() {
             </div>
 
             {/* Heading */}
-            <h1 className="mb-7 font-sans text-[42px] font-light leading-[1.2] tracking-[-0.03em] text-[#0B1628] sm:text-[52px] lg:text-[54px]">
+            <h1 className="mb-7 font-serif text-[42px] font-light leading-[1.2] tracking-[-0.03em] text-[#0B1628] sm:text-[52px] lg:text-[54px]">
               Senior care that
               <br />
               feels like home.

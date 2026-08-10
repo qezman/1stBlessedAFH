@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export function ContactHero() {
   return (
-    <section className="bg-[#0B1628] pt-28 sm:pt-32 pb-24 sm:pb-32 relative overflow-hidden">
+    <section className="bg-hero-glow pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
       <div className="absolute w-[500px] h-[500px] rounded-full bg-[rgba(25,80,138,0.13)] -top-[150px] -right-[100px]" />
       <div className="absolute w-[220px] h-[220px] rounded-full bg-[rgba(201,153,46,0.06)] bottom-[20px] left-[400px]" />
 
@@ -21,7 +21,7 @@ export function ContactHero() {
           </span>
         </div>
 
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[68px] font-light text-white tracking-[-0.03em] leading-[1.2] max-w-[600px] mb-6">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-[68px] font-light text-white tracking-[-0.03em] leading-[1.2] max-w-[600px] mb-6">
           We'd love to
           <br />
           <span className="text-[#C9992E]">hear from you.</span>

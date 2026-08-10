@@ -4,7 +4,7 @@ import { GALLERY_PHOTOS } from "../../data/galleryPhotos";
 
 export const GalleryHero: React.FC = () => {
   return (
-    <section className="bg-[#0B1628] pt-28 pb-24 md:pt-36 md:pb-32 px-6 md:px-12 relative overflow-hidden text-white">
+    <section className="bg-hero-glow pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 px-6 md:px-12 relative overflow-hidden text-white">
       {/* Background Decorative Circle */}
       <div className="absolute w-[500px] h-[500px] rounded-full bg-[#19508A]/12 -top-36 -right-24 pointer-events-none z-0" />
 
@@ -22,7 +22,7 @@ export const GalleryHero: React.FC = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight leading-[1.2] mb-6 max-w-[600px]">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight leading-[1.2] mb-6 max-w-[600px]">
           A look inside
           <br />
           <span className="text-[#C9992E] font-normal">our home.</span>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function AboutHero() {
   return (
-    <section className="bg-[#0B1628] pt-28 sm:pt-32 pb-24 sm:pb-32 relative overflow-hidden">
+    <section className="bg-hero-glow pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
       <div className="absolute w-[600px] h-[600px] rounded-full bg-[rgba(25,80,138,0.15)] -top-[200px] -right-[150px]" />
       <div className="absolute w-[300px] h-[300px] rounded-full bg-[rgba(201,153,46,0.06)] -bottom-[100px] left-[200px]" />
 
@@ -20,7 +20,7 @@ export function AboutHero() {
           </span>
         </div>
 
-        <h1 className="font-sans text-4xl sm:text-5xl lg:text-[72px] font-light text-white tracking-[-0.03em] leading-[1.2] max-w-[700px] mb-8">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-[72px] font-light text-white tracking-[-0.03em] leading-[1.2] max-w-[700px] mb-8">
           A home built on
           <br />
           <span className="text-[#C9992E]">compassion</span> and care.
