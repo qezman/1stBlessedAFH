@@ -17,7 +17,7 @@ function AccordionItem({
   return (
     <div className="border-b border-gray-100 first:border-t">
       <button
-        className="w-full bg-transparent border-none py-6 flex items-center justify-between gap-6 cursor-pointer text-left transition-colors group hover:bg-gray-50/50"
+        className="w-full bg-transparent border-none py-6 flex items-center justify-between gap-8 cursor-pointer text-left transition-colors group hover:bg-gray-50/50"
         onClick={onToggle}
         aria-expanded={isOpen}
       >
@@ -80,8 +80,8 @@ export function FAQSection() {
       : FAQS.filter((f) => f.category === catId).length;
 
   return (
-    <section className="py-20 sm:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 lg:gap-20 items-start">
+    <section className="py-16 md:py-24 lg:py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 lg:gap-12 lg:gap-20 items-start">
         {/* ── SIDEBAR ── */}
         <div className="lg:sticky lg:top-[100px]">
           <div className="font-sans text-[11px] font-semibold tracking-[0.12em] uppercase text-gray-400 mb-4">

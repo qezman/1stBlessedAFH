@@ -27,7 +27,7 @@ function validate(form: FormData): FormErrors {
 
 function SuccessState({ onReset }: { onReset: () => void }) {
   return (
-    <div className="animate-[successIn_0.4s_ease_both] bg-[#F0FFF8] border border-[#A3CFBB] rounded-lg p-10 text-center flex flex-col items-center gap-5">
+    <div className="animate-[successIn_0.4s_ease_both] bg-[#F0FFF8] border border-[#A3CFBB] rounded-lg p-10 text-center flex flex-col items-center gap-8">
       <style>{`@keyframes successIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }`}</style>
       <div className="w-14 h-14 rounded-full bg-[#1A7F4E] flex items-center justify-center flex-shrink-0">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -137,7 +137,7 @@ export function ContactForm() {
     );
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-8">
       {/* Name + Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="flex flex-col gap-1.5">

@@ -26,9 +26,9 @@ const VALUES = [
 
 export function OurValues() {
   return (
-    <section className="py-20 sm:py-24 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end mb-16">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:gap-20 items-end mb-16">
           <div>
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
               — Our Values

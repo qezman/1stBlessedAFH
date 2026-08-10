@@ -32,9 +32,9 @@ const CONTACTS = [
 
 export function StillHaveQuestions() {
   return (
-    <section className="bg-gray-50 py-20 sm:py-24 border-t border-gray-200">
+    <section className="bg-gray-50 py-16 md:py-24 lg:py-32 border-t border-gray-200">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-14">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-8 mb-14">
           <div>
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
               — Get in touch

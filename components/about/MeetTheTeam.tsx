@@ -31,7 +31,7 @@ const TEAM = [
 
 export function MeetTheTeam() {
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
         <Reveal className="mb-14 max-w-[520px]">
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#25508A] mb-5">
@@ -42,7 +42,7 @@ export function MeetTheTeam() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {TEAM.map((member, i) => (
             <Reveal key={i} delay={i * 0.08} className="flex flex-col">
               <div className="w-full aspect-[3/4] rounded-lg overflow-hidden mb-4 relative border border-gray-100 shadow-sm">

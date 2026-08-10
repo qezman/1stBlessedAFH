@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export function AboutCTA() {
   return (
-    <section className="py-12 sm:py-20 bg-white" id="visit">
+    <section className="py-16 md:py-24 lg:py-32 bg-white" id="visit">
       <div className="max-w-[1200px] mx-auto lg:px-12">
         <div className="bg-[#0A1220] rounded-none lg:rounded-2xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center shadow-xl">
           <div>

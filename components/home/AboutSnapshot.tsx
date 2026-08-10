@@ -15,9 +15,9 @@ const HIGHLIGHTS = [
 
 export function AboutSnapshot() {
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <Reveal className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-[450px]">
               <Image

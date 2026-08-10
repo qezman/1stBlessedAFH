@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-[#0B1628] text-white pt-16 pb-12 border-t border-white/10">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1.2fr] gap-10 lg:gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1.2fr] gap-10 lg:gap-8 lg:gap-12 mb-16">
           {/* Column 1: Brand & Badge */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
@@ -147,7 +147,7 @@ export function Footer() {
             © {new Date().getFullYear()} 1st Blessed Adult Family Home. All
             rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-8">
             <Link
               href="/privacypolicy"
               className="hover:text-white transition-colors"

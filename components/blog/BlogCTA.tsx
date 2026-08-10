@@ -13,7 +13,7 @@ export function BlogCTA({
   label = "Have questions?",
 }: BlogCTAProps) {
   return (
-    <section className="py-12 sm:py-20 bg-gray-50">
+    <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="bg-[#0A1220] rounded-2xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center shadow-xl">
           <div>
