@@ -8,7 +8,7 @@ export function ArticleBody({ post }: { post: FullPost }) {
 
   return (
     <section className="px-6 py-20 sm:px-12 sm:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-16 lg:gap-20 items-start">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16 lg:gap-20 items-start">
         {/* Article body */}
         <div>
           <PortableTextBody blocks={post.body} />
@@ -33,7 +33,7 @@ export function ArticleBody({ post }: { post: FullPost }) {
         </div>
 
         {/* Sticky sidebar */}
-        <div className="lg:sticky lg:top-[100px] flex flex-col gap-6">
+        <div className="lg:sticky lg:top-[100px] flex flex-col gap-8">
           {/* Table of contents */}
           {headings.length > 0 && (
             <div className="bg-gray-50 border border-gray-100 rounded p-6">
