@@ -43,7 +43,7 @@ const SERVICES = [
 
 export function ServicesGrid() {
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12">
         <Reveal className="mb-14 max-w-[500px]">
           <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#1A3358] mb-5">
@@ -60,14 +60,14 @@ export function ServicesGrid() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-8">
           {SERVICES.map((svc, i) => {
             const Icon = svc.icon;
             return (
               <Reveal
                 key={i}
                 delay={(i % 3) * 0.06}
-                className="bg-white border border-[#E9ECEF] rounded-2xl p-8 flex flex-col items-start shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-white border border-[#E9ECEF] rounded-2xl p-8 flex flex-col items-start shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300"
               >
                 <div className="w-11 h-11 bg-[#EEF5FC] rounded-xl flex items-center justify-center mb-6 text-[#1A3358]">
                   <Icon className="w-5 h-5 stroke-[1.75]" />

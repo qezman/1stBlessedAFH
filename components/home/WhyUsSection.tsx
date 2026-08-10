@@ -26,8 +26,8 @@ const DIFFERENTIATORS = [
 
 export function WhyUsSection() {
   return (
-    <section className="py-20 sm:py-24 bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section className="py-16 md:py-24 lg:py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 lg:gap-24 items-center">
         <Reveal>
           <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-navy-500 mb-5">
             <span className="w-5 h-[1px] bg-navy-500" />
@@ -45,11 +45,11 @@ export function WhyUsSection() {
           </Button>
         </Reveal>
 
-        <Reveal delay={0.1} className="flex flex-col border-l border-gray-200">
+        <Reveal delay={0.1} className="flex flex-col gap-4">
           {DIFFERENTIATORS.map((d, i) => (
             <div
               key={i}
-              className="py-7 pl-9 border-b border-gray-100 grid grid-cols-[auto_1fr] gap-5 items-start last:border-b-0"
+              className="bg-white border border-[#E9ECEF] rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300 grid grid-cols-[auto_1fr] gap-8 items-start"
             >
               <span className="font-sans text-xs font-semibold text-navy-300 tracking-[0.08em] pt-0.5">
                 0{i + 1}

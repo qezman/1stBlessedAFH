@@ -10,7 +10,7 @@ interface BlogCardProps {
 
 export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   return (
-    <article className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-300 group">
+    <article className="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300 group">
       <div className="p-6">
         <div className="flex items-center justify-between gap-2 mb-4">
           <Badge variant={post.category === "FAMILY GUIDES" ? "gold" : "blue"}>
