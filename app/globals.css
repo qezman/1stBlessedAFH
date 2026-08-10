@@ -15,6 +15,7 @@
 
   img {
     max-width: 100%;
+    @apply rounded-xl filter saturate-[1.05] contrast-[1.02];
   }
 
   h1,
