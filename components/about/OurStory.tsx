@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { User } from "lucide-react";
 import { Reveal } from "../ui/Reveal";
 
 export function OurStory() {
@@ -57,8 +58,8 @@ export function OurStory() {
           </div>
 
           <div className="absolute -bottom-6 -left-4 sm:-left-8 bg-white border border-gray-200 rounded-none p-5 shadow-lg flex items-center gap-4 min-w-[240px]">
-            <div className="w-12 h-12 rounded-full bg-[#EEF5FC] flex items-center justify-center text-lg flex-shrink-0">
-              👤
+            <div className="w-12 h-12 rounded-full bg-[#EEF5FC] flex items-center justify-center flex-shrink-0">
+              <User className="w-6 h-6 text-[#1A3358]" strokeWidth={1.5} />
             </div>
             <div>
               <div className="text-sm font-semibold text-[#0B1628] mb-0.5">

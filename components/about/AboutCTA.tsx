@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 export function AboutCTA() {
   return (
     <section className="py-12 sm:py-20 bg-white" id="visit">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="bg-[#0A1220] rounded-2xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center shadow-xl">
+      <div className="max-w-[1200px] mx-auto lg:px-12">
+        <div className="bg-[#0A1220] rounded-none lg:rounded-2xl p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center shadow-xl">
           <div>
             <div className="flex items-center gap-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#DDB04A] mb-5">
               — SCHEDULE A VISIT

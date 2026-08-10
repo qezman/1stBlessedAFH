@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { User } from "lucide-react";
 import type { FullPost } from "./blogData";
 import { PortableTextBody, getHeadings } from "./PortableText";
 
@@ -59,8 +60,8 @@ export function ArticleBody({ post }: { post: FullPost }) {
             <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-gray-400 mb-4">
               Written by
             </div>
-            <div className="w-12 h-12 rounded-full bg-[#EEF5FC] flex items-center justify-center text-xl mb-3">
-              👤
+            <div className="w-12 h-12 rounded-full bg-[#EEF5FC] flex items-center justify-center mb-3">
+              <User className="w-6 h-6 text-[#1A3358]" strokeWidth={1.5} />
             </div>
             <div className="text-sm font-medium text-[#0B1628] mb-0.5">
               {post.author || "[Author Name]"}

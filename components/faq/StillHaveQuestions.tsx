@@ -1,15 +1,17 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone, Mail, Home } from "lucide-react";
 
 const CONTACTS = [
   {
-    icon: "📞",
+    icon: Phone,
+    iconColor: "text-[#1A3358]",
     iconBg: "#EEF5FC",
     title: "Call us",
     text: "Speak directly with a caregiver. We're available 7 days a week and happy to answer anything.",
     link: { href: "tel:2063030549", label: "206-303-0549" },
   },
   {
-    icon: "✉️",
+    icon: Mail,
+    iconColor: "text-[#C9992E]",
     iconBg: "#F7EDD4",
     title: "Email us",
     text: "Prefer to write? Send us your questions and we'll respond within one business day.",
@@ -19,7 +21,8 @@ const CONTACTS = [
     },
   },
   {
-    icon: "🏠",
+    icon: Home,
+    iconColor: "text-[#1A7F4E]",
     iconBg: "#E8F0EA",
     title: "Visit the home",
     text: "Nothing answers questions better than walking through the door. Schedule an in-person tour.",
@@ -47,17 +50,19 @@ export function StillHaveQuestions() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {CONTACTS.map((c, i) => (
-            <div
-              key={i}
-              className="bg-white border border-gray-200 rounded p-8 sm:p-10 flex flex-col gap-3.5"
-            >
+          {CONTACTS.map((c, i) => {
+            const Icon = c.icon;
+            return (
               <div
-                className="w-11 h-11 rounded flex items-center justify-center text-xl mb-1.5"
-                style={{ backgroundColor: c.iconBg }}
+                key={i}
+                className="bg-white border border-gray-200 rounded p-8 sm:p-10 flex flex-col gap-3.5"
               >
-                {c.icon}
-              </div>
+                <div
+                  className="w-11 h-11 rounded flex items-center justify-center mb-1.5"
+                  style={{ backgroundColor: c.iconBg }}
+                >
+                  <Icon className={`w-5 h-5 ${c.iconColor}`} strokeWidth={1.5} />
+                </div>
               <h3 className="text-base font-medium text-[#0B1628] tracking-[-0.01em]">
                 {c.title}
               </h3>
@@ -72,7 +77,8 @@ export function StillHaveQuestions() {
                 <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
             </div>
-          ))}
+          );
+        })}
         </div>
       </div>
     </section>

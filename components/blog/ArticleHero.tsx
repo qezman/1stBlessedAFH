@@ -40,7 +40,7 @@ export function ArticleHero({ post }: { post: FullPost }) {
             <span className="w-1 h-1 rounded-full bg-gray-300" />
             <span>1st Blessed Team</span>
           </div>
-          <h1 className="font-sans text-3xl sm:text-4xl lg:text-[52px] font-light text-[#0B1628] tracking-[-0.025em] leading-[1.3] mb-6">
+          <h1 className="font-sans text-3xl sm:text-4xl lg:text-[52px] font-light text-[#0B1628] tracking-[-0.025em] leading-relaxed mb-6">
             {post.title}
           </h1>
           <p className="text-lg font-light text-gray-500 leading-[1.75]">
