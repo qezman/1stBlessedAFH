@@ -37,7 +37,7 @@ export function FAQsHero() {
           life at 1st Blessed looks like — before you even visit.
         </p>
 
-        <div className="flex flex-wrap gap-2.5">
+        {/* <div className="flex flex-wrap gap-2.5">
           <div className="bg-white/5 border border-white/10 rounded-md px-3.5 py-2 text-xs font-light text-navy-200">
             {FAQS.length} questions answered
           </div>
@@ -49,7 +49,7 @@ export function FAQsHero() {
               {c.count} on {c.label}
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 leading-[0] z-10 -mb-px">
