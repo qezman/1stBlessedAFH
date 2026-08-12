@@ -37,8 +37,9 @@ const PRIVACY_SECTIONS: LegalSection[] = [
         <ul>
           <li>
             <strong>Information you provide directly</strong> — When you fill
-            out our contact form, you may provide your name, email address,
-            phone number, and any details you include in your message.
+            out our contact form, you provide your name, email address, and
+            message, along with your reason for enquiry and, optionally, a
+            phone number.
           </li>
           <li>
             <strong>Automatically collected information</strong> — Like most
@@ -68,6 +69,35 @@ const PRIVACY_SECTIONS: LegalSection[] = [
     ),
   },
   {
+    heading: "Third-Party Services",
+    content: (
+      <>
+        <p>
+          We rely on a small number of trusted service providers to operate
+          this Site. They only receive the information needed to perform
+          their function, and are not permitted to use it for their own
+          marketing purposes:
+        </p>
+        <ul>
+          <li>
+            <strong>Resend</strong> — When you submit our contact form, the
+            details you enter are delivered to our team through Resend's
+            email delivery service.
+          </li>
+          <li>
+            <strong>UserWay</strong> — Our accessibility menu is powered by
+            UserWay, which may load a script and set cookies to remember your
+            accessibility preferences across visits to the Site.
+          </li>
+        </ul>
+        <p>
+          We do not sell your personal information, and we do not share it
+          with third parties for their own advertising purposes.
+        </p>
+      </>
+    ),
+  },
+  {
     heading: "Contact Us",
     content: (
       <>
@@ -92,7 +122,7 @@ export default function PrivacyPolicyPage() {
     <LegalPage
       title="Privacy Policy"
       subtitle="How we collect, use, and protect information on this website."
-      lastUpdated="April 2025"
+      lastUpdated="August 2026"
       sections={PRIVACY_SECTIONS}
     />
   );

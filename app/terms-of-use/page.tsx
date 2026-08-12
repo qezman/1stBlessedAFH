@@ -50,8 +50,39 @@ const TERMS_SECTIONS: LegalSection[] = [
     content: (
       <>
         <p>
-          The content on this Site is provided for general informational
-          purposes only. Nothing on this Site constitutes medical or legal advice.
+          The content on this Site — including our blog, FAQ, and photo
+          gallery — is provided for general informational purposes only.
+          Nothing on this Site constitutes medical or legal advice, and
+          nothing on this Site forms a care agreement or admission contract.
+          Availability, pricing, and services should be confirmed directly
+          with our team.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Intellectual Property",
+    content: (
+      <>
+        <p>
+          The text, photographs, and graphics on this Site — including our
+          gallery images and blog articles — belong to 1st Blessed Adult
+          Family Home unless otherwise noted, and may not be copied,
+          reproduced, or reused without our written permission.
+        </p>
+      </>
+    ),
+  },
+  {
+    heading: "Accessibility",
+    content: (
+      <>
+        <p>
+          This Site includes an accessibility menu, provided by UserWay, that
+          lets visitors adjust display and navigation settings. We are
+          committed to making this Site usable for all visitors; if you
+          encounter an accessibility barrier, please contact us so we can
+          assist you.
         </p>
       </>
     ),
@@ -79,7 +110,7 @@ export default function TermsOfUsePage() {
     <LegalPage
       title="Terms of Use"
       subtitle="The terms and conditions governing your use of this website."
-      lastUpdated="April 2025"
+      lastUpdated="August 2026"
       sections={TERMS_SECTIONS}
     />
   );
