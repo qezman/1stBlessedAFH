@@ -5,7 +5,8 @@ import {
   type ContactRequest,
 } from "../../../lib/contact";
 
-const DELIVERY_ERROR = "Unable to send your message right now. Please try again shortly.";
+const DELIVERY_ERROR =
+  "Unable to send your message right now. Please try again shortly.";
 
 export async function POST(request: Request) {
   // These stay on the server so the Resend key never reaches the browser.
