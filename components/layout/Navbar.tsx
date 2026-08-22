@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Menu, X, ArrowRight } from "lucide-react";
@@ -17,12 +17,46 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
 
   useEffect(() => setMenuOpen(false), [pathname]);
 
+  // Hide the fixed header on scroll-down, reveal it again on scroll-up (or near
+  // the top). Since the header is position:fixed it always sits on top of
+  // whatever has scrolled underneath it — sliding it away on scroll-down is
+  // what stops it from covering hero content instead of just overlapping it.
+  useEffect(() => {
+    if (menuOpen) {
+      setHidden(false);
+      return;
+    }
+
+    function handleScroll() {
+      const currentY = window.scrollY;
+      const scrollingDown = currentY > lastScrollY.current + 4;
+      const scrollingUp = currentY < lastScrollY.current - 4;
+      const pastThreshold = currentY > 96;
+
+      if (scrollingDown && pastThreshold) {
+        setHidden(true);
+      } else if (scrollingUp || currentY <= 96) {
+        setHidden(false);
+      }
+      lastScrollY.current = currentY;
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [menuOpen]);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 transition-all duration-200">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 transition-transform duration-300 ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12">
         <div className="flex h-[72px] items-center justify-between">
           {/* Logo */}
@@ -114,6 +148,7 @@ export function Navbar() {
                   key={path}
                   href={path}
                   prefetch
+                  onClick={() => setMenuOpen(false)}
                   className={`text-sm py-2.5 px-4 rounded-lg transition-colors ${
                     active
                       ? "bg-[#EEF5FC] text-[#2B1E78] font-normal"
@@ -127,6 +162,7 @@ export function Navbar() {
             <div className="pt-4 mt-2 border-t border-gray-100">
               <Link
                 href="/contact"
+                onClick={() => setMenuOpen(false)}
                 className="w-full inline-flex items-center justify-center gap-2 bg-[#2B1E78] text-white text-sm font-normal py-3 rounded-lg"
               >
                 <span>Schedule a Tour</span>

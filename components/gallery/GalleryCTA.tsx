@@ -28,13 +28,13 @@ export const GalleryCTA: React.FC = () => {
           <div className="lg:col-span-4 flex flex-col space-y-3.5 shrink-0 min-w-0 sm:min-w-[260px] w-full sm:w-auto">
             <a
               href="tel:+12063030549"
-              className="inline-flex items-center justify-center gap-2 bg-[#E5B248] text-white border border-[#E5B248] px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center hover:bg-transparent hover:text-[#E5B248]"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-[#E5B248] text-white border border-[#E5B248] px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center hover:bg-transparent hover:text-[#E5B248]"
             >
               Call 206-303-0549
             </a>
             <a
               href="mailto:1stblessedafh@gmail.com"
-              className="inline-flex items-center justify-center gap-2 bg-transparent text-white border border-white/80 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-200 text-center hover:bg-white hover:text-[#0A1220]"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-transparent text-white border border-white/80 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-200 text-center hover:bg-white hover:text-[#0A1220]"
             >
               Email us
             </a>

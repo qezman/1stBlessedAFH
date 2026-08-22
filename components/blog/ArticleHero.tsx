@@ -7,7 +7,7 @@ export function ArticleHero({ post }: { post: FullPost }) {
   const shareUrl = `https://1stblessedafh.com/blog/${post.slug}`;
 
   return (
-    <section className="pt-16 sm:pt-24 pb-0 bg-white px-6 sm:px-12">
+    <section className="pt-28 sm:pt-24 pb-0 bg-white px-6 sm:px-12">
       <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 mb-10">

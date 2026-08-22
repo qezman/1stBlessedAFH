@@ -8,7 +8,7 @@ export function FAQsHero() {
   }));
 
   return (
-    <section className="bg-hero-glow pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
+    <section className="bg-hero-glow pt-28 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
       <div className="absolute w-[500px] h-[500px] rounded-full bg-[rgba(25,80,138,0.13)] -top-[150px] -right-[100px]" />
       <div className="absolute w-[250px] h-[250px] rounded-full bg-[rgba(201,153,46,0.05)] bottom-[20px] left-[350px]" />
 

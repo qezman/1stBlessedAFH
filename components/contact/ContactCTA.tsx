@@ -24,14 +24,14 @@ export function ContactCTA() {
           <div className="flex flex-col gap-3.5 min-w-0 sm:min-w-[260px] w-full sm:w-auto">
             <a
               href="tel:2063030549"
-              className="inline-flex items-center justify-center bg-[#E5B248] text-white border border-[#E5B248] px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center hover:bg-transparent hover:text-[#E5B248]"
+              className="inline-flex w-full sm:w-auto items-center justify-center bg-[#E5B248] text-white border border-[#E5B248] px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center hover:bg-transparent hover:text-[#E5B248]"
             >
               206-303-0549
             </a>
 
             <a
               href="mailto:1stblessedafh@gmail.com"
-              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-white border border-white/80 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-200 text-center hover:bg-white hover:text-[#0A1220] group"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-transparent text-white border border-white/80 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-200 text-center hover:bg-white hover:text-[#0A1220] group"
             >
               <span>Send an email</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

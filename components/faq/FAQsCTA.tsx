@@ -21,14 +21,14 @@ export function FAQsCTA() {
           <div className="flex flex-col gap-3.5 min-w-[260px] w-full sm:w-auto">
             <a
               href="tel:2063030549"
-              className="inline-flex items-center justify-center bg-[#E5B248] text-white border border-[#E5B248] px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center hover:bg-transparent hover:text-[#E5B248]"
+              className="inline-flex w-full sm:w-auto items-center justify-center bg-[#E5B248] text-white border border-[#E5B248] px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 text-center hover:bg-transparent hover:text-[#E5B248]"
             >
               206-303-0549
             </a>
 
             <a
               href="mailto:1stblessedafh@gmail.com"
-              className="inline-flex items-center justify-center gap-2.5 bg-transparent text-white border border-white/80 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-200 text-center hover:bg-white hover:text-[#0A1220]"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 bg-transparent text-white border border-white/80 px-7 py-3.5 rounded-lg font-medium text-sm transition-all duration-200 text-center hover:bg-white hover:text-[#0A1220]"
             >
               Send an email
             </a>

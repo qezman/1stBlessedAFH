@@ -4,7 +4,7 @@ import { GALLERY_PHOTOS } from "../../data/galleryPhotos";
 
 export const GalleryHero: React.FC = () => {
   return (
-    <section className="bg-hero-glow pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 px-6 md:px-12 relative overflow-hidden text-white">
+    <section className="bg-hero-glow pt-28 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 px-6 md:px-12 relative overflow-hidden text-white">
       {/* Background Decorative Circle */}
       <div className="absolute w-[500px] h-[500px] rounded-full bg-[#19508A]/12 -top-36 -right-24 pointer-events-none z-0" />
 

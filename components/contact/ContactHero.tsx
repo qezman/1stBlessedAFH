@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export function ContactHero() {
   return (
-    <section className="bg-hero-glow pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
+    <section className="bg-hero-glow pt-28 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
       <div className="absolute w-[500px] h-[500px] rounded-full bg-[rgba(25,80,138,0.13)] -top-[150px] -right-[100px]" />
       <div className="absolute w-[220px] h-[220px] rounded-full bg-[rgba(201,153,46,0.06)] bottom-[20px] left-[400px]" />
 
@@ -33,22 +33,22 @@ export function ContactHero() {
           you.
         </p>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3">
           <a
             href="tel:2063030549"
-            className="flex items-center gap-2 bg-white/5 border border-white/10 rounded px-4 py-2.5 text-[13px] font-light text-navy-200 hover:bg-white/10 transition-colors"
+            className="flex w-full sm:w-auto items-center justify-center gap-2 bg-white/5 border border-white/10 rounded px-4 py-2.5 text-[13px] font-light text-navy-200 hover:bg-white/10 transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-navy-300" />
             206-303-0549
           </a>
           <a
             href="mailto:1stblessedafh@gmail.com"
-            className="flex items-center gap-2 bg-white/5 border border-white/10 rounded px-4 py-2.5 text-[13px] font-light text-navy-200 hover:bg-white/10 transition-colors"
+            className="flex w-full sm:w-auto items-center justify-center gap-2 bg-white/5 border border-white/10 rounded px-4 py-2.5 text-[13px] font-light text-navy-200 hover:bg-white/10 transition-colors"
           >
             <Mail className="w-3.5 h-3.5 text-navy-300" />
             1stblessedafh@gmail.com
           </a>
-          <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded px-4 py-2.5 text-[13px] font-light text-navy-200">
+          <div className="flex w-full sm:w-auto items-center justify-center gap-2 bg-white/5 border border-white/10 rounded px-4 py-2.5 text-[13px] font-light text-navy-200">
             <MapPin className="w-3.5 h-3.5 text-navy-300" />
             Everett, WA 98203
           </div>

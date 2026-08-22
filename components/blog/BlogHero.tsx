@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function BlogHero() {
   return (
-    <section className="bg-hero-glow pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
+    <section className="bg-hero-glow pt-28 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 relative overflow-hidden">
       <div className="absolute w-[500px] h-[500px] rounded-full bg-[rgba(25,80,138,0.13)] -top-[150px] -right-[100px]" />
 
       <div className="max-w-[1200px] mx-auto px-6 sm:px-12 relative z-10">

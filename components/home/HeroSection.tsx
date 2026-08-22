@@ -40,14 +40,14 @@ export function HeroSection() {
             <div className="mb-12 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-[#2B1E78] px-5 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-[#221766]"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-lg bg-[#2B1E78] px-5 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-[#221766]"
               >
                 <span>Schedule a tour</span>
                 <ArrowRight className="w-[18px] h-[18px]" />
               </Link>
               <Link
                 href="/gallery"
-                className="inline-flex items-center justify-center text-[15px] font-medium text-[#0B1628] border border-[#DEE2E6] hover:border-[#2B1E78] hover:text-[#2B1E78] px-6 py-3.5 rounded-lg transition-colors"
+                className="inline-flex w-full sm:w-auto items-center justify-center text-[15px] font-medium text-[#0B1628] border border-[#DEE2E6] hover:border-[#2B1E78] hover:text-[#2B1E78] px-6 py-3.5 rounded-lg transition-colors"
               >
                 See our Home
               </Link>
